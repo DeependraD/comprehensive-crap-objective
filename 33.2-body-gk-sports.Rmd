@@ -86,7 +86,7 @@ read_csv("./data/sports_terms.csv") %>%
 ```{r national-games}
 read_csv("./data/sports_national_games_countries.csv") %>% 
   knitr::kable(booktabs = TRUE, caption = "National games of some of countries", longtable = TRUE) %>% 
-  kableExtra::kable_styling(latex_options = "striped") # does not work with "striped"
+  kableExtra::kable_styling(font_size = 8) # does not work with "striped"
 ```
 
 ### World Cup

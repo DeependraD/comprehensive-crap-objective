@@ -68,6 +68,8 @@ $RECYCLE.BIN/
 # End of https://www.gitignore.io/api/r,linux,windows,bookdown
 /references/
 # log files
-comprehensive_crap_objective.log
 _book
 comprehensive-crap-objective.Rmd
+comprehensive-crap-objective.pdf
+comprehensive-crap-objective.tex
+comprehensive-crap-objective.log
