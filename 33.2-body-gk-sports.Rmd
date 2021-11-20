@@ -1,0 +1,362 @@
+# Sports
+
+## Sports records
+
+Lawn Tennis
+
+- US Open 2016 [men]: Stan Wawrinka; [Women] : Angelique Kerber
+- French Open 2016[men]: Novak Djokovic; [women] : Gabrin Muguruza
+- Australian Open [men]: Novak Djokovic; [women] : Angelique Kerber
+- Wimbeldon [men]: Andy Murray; [women]: Serena Williams   
+- World Table Tennis Championship: male and female both won by India
+
+Football
+
+- Champions League 2015/16: won by Real Madrid; Athletico Madrid (1st runner up)
+- Premier League2015/16 : won by Leicester City
+- FA Cup winner 2015/16 is Manchester United
+- UEFA Player of the Year 2015/16 : Cristiano Ronaldo
+- LA Liga 2015/16 winner - Barcelona
+- Winner of Euro Cup 2016 is Portugal; France (runner up).
+- Winner of Copa America 2016 is Chile
+
+Cricket
+
+- World Cup Cricket Winner 2015 - Australia, Runner-Up : New Zealand
+- ICC U-19, ICC T-20, ICC T-20 Women's World cup Winner - West Indies
+- T-20 World Cup2016 was held in India; Winner: West Indies, Runner-Up: England
+- IPL 2016 winner - Sunrisers hyderbad, 1st runner-Up : Royal Challengers Banglore
+- EPL 2016 winner - Tez Panchakanya (Captain Sharad Veswakar) held in TU, Kirtipur
+
+Facts
+
+- 12th South Asian Games 2016 was held in India
+- Asian games 2018 will be held in Indonesia.
+- 21st World Cup 2018 is going to be  held in Russia.
+- 22nd World Cup 2022 is going to be held in Quatar.
+- Olympic started in Greece in 1896 AD
+- Olympic 2020 is going to be held in Tokyo, Japan
+- Euro Cup 2016 was held in France.
+- Formula One 2016 Winner - Nico Rosberg
+- Moto GP 2016 Winner - Marc Marquez
+- In Olympic 2016- USA finished first with medal count- 46 gold, total meadls 121
+- UK finished  Second with 27 gold
+- China third with26 gold
+- Arnold Palmer died in the Sep. 25, 2016 who is legend in the field of Golf .
+- Cope America is World's oldest football tournament.
+- World Cup Football started in 1930 from Uruguay
+- First winner of World Cup football Uruguay
+- World Cup cricket started in 1975 from UK.
+- Modern Olympic Games started in 1896 in Greece.
+- ANFA related to Football, CAN related to Cricket
+- Nepal Sports Council established in 2017.
+- First National Game held on Bhadra 27, 2038 B.S. Kathmandu.
+- Olympic held for physical disable : Paraolymic
+- Sangina Baidya related to Taekwondo.
+- Which is the place famous for Elephant polo in the world? (Chitwan, Nepal)
+- Magician of Football : Pele of Brazil
+- The largest organization in the world concerning football : FIFA
+- World cup Football 2022 to be held @ Quatar and 2018 @ Russia
+- Corner kick, free kick, dribble, goal kick, upside, penalty, throw in, etc related to football
+- Pass, bye, wicket, cover drive, run out, catch, inning : cricket
+- Fingering, digging, service, spike, block point : volleyball
+- Tennis called Pingpong in China.
+- Kabaddi & Dandibiyo the National game of our country.
+
+**Number of players in different games**
+
+```{r sport-num-players}
+read_csv("./data/sports_number_of_players.csv") %>% 
+  knitr::kable(caption = "Number of players in different sports.", booktabs = TRUE) %>% 
+  kableExtra::kable_styling(latex_options = c("HOLD_position", "striped"))
+```
+
+**Sporting terminologies**
+
+```{r sporting-terminologies}
+read_csv("./data/sports_terms.csv") %>% 
+  knitr::kable(caption = "A glossary of sporting terms used worldwide.", booktabs = TRUE) %>% 
+  kableExtra::kable_styling(latex_options = "striped") %>% 
+  kableExtra::column_spec(column = 1:2, width = c("18em", "8em"))
+```
+
+
+**National games of some countries**
+
+```{r national-games}
+read_csv("./data/sports_national_games_countries.csv") %>% 
+  knitr::kable(booktabs = TRUE, caption = "National games of some of countries", longtable = TRUE) %>% 
+  kableExtra::kable_styling(latex_options = c("HOLD_position")) # does not work with "striped"
+```
+
+### World Cup
+
+**Individual records for World cup, 2018**
+
+- Most goals scored by an individual: 6; Harry Kane
+- Most assists provided by an individual: 2; Ever Banega, Nacer Chadli, Viktor Claesson, Philippe Coutinho, Kevin De Bruyne, Artem Dzyuba, Aleksandr Golovin, Antoine Griezmann, Eden Hazard, Lucas Hernandez, Lionel Messi, Thomas Meunier, Juan Fernando Quintero, James Rodríguez, Carlos Andrés Sánchez, Youri Tielemans, Wahbi Khazri
+- Most goals and assists produced by an individual: 6
+- Antoine Griezmann (4 goals, 2 assists), Harry Kane (6 goals)
+- Most clean sheets achieved by a goalkeeper: 3
+- Alisson, Thibaut Courtois, Hugo Lloris, Fernando Muslera, Robin Olsen
+- Most consecutive clean sheets achieved by a goalkeeper: 3
+- Alisson, Fernando Muslera
+- Most goals scored by one player in a match: 3
+- Harry Kane for England against Panama, Cristiano Ronaldo for Portugal against Spain
+- Oldest goal scorer: 37 years, 120 days
+- Felipe Baloy for Panama against England
+- Youngest goal scorer: 19 years, 183 days
+- Kylian Mbappé for France against Peru
+
+**Win loss records for World cup, 2018**
+
+- Most wins: 6 – Belgium, France
+- Fewest wins: 0 – Australia, Costa Rica, Egypt, Iceland, Morocco, Panama
+- Most losses: 3 – Egypt, England, Panama
+- Fewest losses: 0 – Denmark, France, Spain
+- Most draws: 3 – Denmark, Spain
+- Fewest draws: 0 – Belgium, Egypt, Germany, Mexico, Nigeria, Panama, Peru, Poland, Saudi Arabia, Serbia, South Korea, Sweden, Tunisia, Uruguay
+- Most points in the group stage: 9 – Belgium, Croatia, Uruguay
+- Fewest points in the group stage: 0 - Egypt, Panama
+
+## Olympic games
+
+Olympic Games are the most important international athletic competition in the world. They are held every four years, each time in a different country. This world's oldest sports event brings together thousands of the world's finest athletes to compete against one another in a variety of individual and team sports. More than 10,000 athletes representing  over  190  nations participate in the Olympics. Millions of people attend the games and more than 1 billion people throughout the world watch the Olympics on television.Ancient Olympics The Olympics Games originated in ancient Greece and were held from 776 BC to AD 393. They were celebrated like religious festivals, honouring Zeus, the king of the gods. The Roman conquered Greece during the 140's BC, and the games soon lost their religious meaning.  In  AD  393,  Emperor Theodosius I banned the games.
+
+Modern Olympics 
+
+Baron Pierre de Coubertine, a french educator,  revived  the  games  to encourage world peace and friendship and  to  promote  healthy  sporting competition for the youth of the world. The first modern Olympic Games were held in Athens, Greece, in 1896. In the opening ceremony, the athletes of Greece march into the stadium first, in honour of the original games held in ancient Greece. The athletes of the host country enter last.
+
+The International Olympic Committee
+
+The International Olympic Committee (IOC) is the governing body of the Olympic Games. The IOC has its headquarters in Lausanne, Switzerland. The Committee approves the sports and events to be included in the games. The IOC also selects the host cities for the games, seven years in advance. Host cities  provide  a  special  housing compound called the Olympic Village for the athletes and coaches.
+
+Olympic Flame
+
+The flame symbolizes the light of spirit, knowledge and life, and it is a message of peace. The fire is ignited in Olympia, Greece, by using a mirror to concentrate the rays of the Sun. Runners transport the flame in a torch relay from Greece to the site of the games. The final runner carries the torch into the stadium, circles the tract and lights a huge cauldron (pot). The flame is kept burning throughout  the  games  and  then extinguished  during  the  closing ceremony.
+
+Olympic Emblem and Flag
+
+The Olympic Emblem, created in 1913, consists of five interlocking rings that represent the continents of Africa, Asia, Australia, Europe and the Americas. The flag of every nation competing in the games has at least one of these colours. The Olympic Flag is white in colour, originally made of cotton. The Emblem is placed in the middle of the flag.
+
+```{r olympic-ring-symbolism}
+
+tribble(~"Color of ring", ~"Continent represented",
+        "Blue ring", "Europe",
+        "Yellow ring", "Asia",
+        "Black ring", "Africa",
+        "Green ring", "Australia",
+        "Red ring", "America") %>% 
+  knitr::kable(caption = "Symbolism of olympic rings", booktabs = TRUE) %>% 
+  kableExtra::kable_styling(latex_options = "striped") 
+```
+
+Olympic Motto
+
+Citius, Altius, Fortius These are Latin words which are translated as: 'Swifter, Higher, Stronger'.
+
+Olympic Epigram
+
+"The essential thing in life is not conquering but fighting well."
+
+Olympic Medals
+
+The winners are awarded medals, but no prize money. The top three finishers in each event receive a medal and a diploma. The next five finishers get only a diploma. Each first-place winner receives a gold medal, which is actually made of silver and coated with gold.
+
+The second-place medal is made of silver and the third-place medal is made of bronze. The design for the medal changes  for  each  Olympics. All members of a winning relay team get a medal. In team sports, all the members of a winning team who have played in at least one of the games during the competition receive a medal.
+
+The Summer Games
+
+The Olympic Games consist of the Summer Games and the Winter Games. The Summer Games are held during the summer season of the host city, usually between July and October. These games last 16 days. Athletes compete in more than 270 separate events during the Summer Games. Women  first participated in Olympics in 1900 in Paris.
+
+The Winter Games
+
+The Winter Games with over 60 events are usually held in February and last 16 days. The games attract approximately 2,000 athletes from around 60 countries. The Winter Games, established in 1924, took place the same year as the Summer Games. Beginning in 1994, the Winter and Summer Games were divided and scheduled on four-year cycles two years apart.
+
+## World cup soccer
+
+The World Cup Soccer Tournament, organized by the Federation of the International  Football  Association (FIFA), is one of the most popular sports tournaments in the world. It is held every four years to determine the world's soccer champion. The Cup given to the winner is made of pure solid gold and is 12 inches in height. Winners and the venues of the previous  World  Cup  Soccer Tournaments are as follows:
+
+Year: Winner: Runner-up: Score
+
+- Obtain relevant information from wiki
+
+## World cup cricket
+
+The World Cup Cricket Tournament is held every four years. The first tournament was held in 1975 in England in which England, Australia, West Indies, New Zealand, India and Pakistan took Part. The West Indies won this tournament and also the next one in 1979. The first three tournaments, for three consecutive occasions - 1975, 1979 and 1983, were held in England. The  ICC  (International  Cricket Council) is in charge of the overall administration of the World Cup Cricket Tournament, though the ruling bodies of the countries where the tournaments take place  are  responsible  for  local arrangements. The ICC was originally founded in 1909 as the Imperial Cricket Conference  but  was  renamed  the International Cricket Council in 1989. Winners and the venues of the previous World  Cup  Cricket Tournaments are as follows:
+
+Year: Winner: Runner-up: Venue
+
+## Trophies
+
+Popular sporting events and trophies.
+
+```{r sporting-trophies}
+read_csv("./data/world_sporting_events_trophies.csv") %>% 
+  knitr::kable(caption = "Popular sporting events and trophies", booktabs = TRUE, longtable = TRUE) %>% 
+  kableExtra::kable_styling(latex_options = "striped")
+```
+
+**Association football**
+
+Copa Libertadores Trophy - Known simply as Libertadores or Copa, awarded to the winners of the Copa Libertadores since 1960. It is one of the most prestigious laurels in the Western Hemisphere.
+
+The FA Cup - Awarded to winners of the primary English domestic football knockout tournament, officially The Football Association Challenge Cup, often referred to as just the FA Cup. The FA Cup was inaugurated in 1871 and is therefore the oldest tournament in club football. The original trophy, however, was stolen in 1895 and the current trophy design, which was first awarded in 1911, is actually the fifth incarnation in total.
+
+FIFA World Cup Trophy - Awarded to the winners of the FIFA World Cup from the 1974 FIFA World Cup onwards. Previous winners were awarded the Jules Rimet Trophy (known simply as Victory until 1949), which was awarded in perpetuity to Brazil after their 3rd win in the 1970 FIFA World Cup. Both are referred to colloquially as the World Cup
+
+European Champion Clubs' Cup - colloquially the European Cup, awarded to the winners of the European Cup (before 1992-93) and the UEFA Champions League (since 1992-93). It is the most prestigious trophy in the Eastern Hemisphere. It is affectionately known as "old big ears" due to its shape.
+
+Philip F. Anschutz Trophy - Awarded to the winners of the MLS Cup, the MLS' championship game
+
+UEFA Super Cup - Awarded to the winners of the Uefa Champions League and the UEFA Europa League.
+
+The Scottish Cup - Awarded to the winners of the primary domestic knockout cup tournament of Scotland (the Scottish Football Association Challenge Cup, or just Scottish Cup). The tournament was founded in 1873 and still presents the original trophy. The Scottish Cup is therefore the world's oldest national football trophy and second oldest national trophy, behind the Carlisle Bells race trophy dating back to 1599.
+
+Other notable trophies in the sport includes the Jules Rimet Trophy. 
+
+**Australian rules football**
+
+AFL Premiership Cup - Awarded to the Australian Football League's Premier/ Winner of the AFL Grand Final
+
+McClelland Trophy - Awarded to the Australian Football League's Home & Away season / Minor Premiership champion.
+
+**Baseball**
+
+Commissioner's Trophy - Awarded to Major League Baseball's World Series Champion
+
+**Basketball**
+
+Jun Bernardino Trophy - Awarded to the Philippine Basketball Association Philippine Cup champion
+
+Larry O'Brien Championship Trophy - Awarded to the National Basketball Association's champion
+
+Naismith Trophy - Awarded to the FIBA World Cup champions
+
+**Cricket**
+
+Cricket World Cup Trophy - Awarded to the Winners of the ICC Cricket World Cup.
+
+The Ashes urn - Awarded to the winning team of the biennial cricket Test series between England and Australia. However, the urn itself has never been a trophy and remains in the MCC Cricket Museum at Lord's Cricket Ground. Only from 1998-99 were the winners of the Ashes presented with a replica (not to scale) of the urn in Waterford Crystal.
+
+**Gaelic Football**
+
+Sam Maguire Cup - Awarded to the winners of the All-Ireland Senior Football Championship
+
+**American football**
+
+BCS Trophy - Awarded to College Football's National Champion
+
+College Football Playoff National Championship Trophy - Awarded to the winner of the College Football Playoff
+
+Heisman Trophy - Awarded to the NCAA's Most Valuable Player in College Football
+
+Vince Lombardi Trophy - Awarded to the National Football League's Super Bowl champion
+Canadian football
+
+Grey Cup - Awarded to the Canadian Football League's champion
+
+Vanier Cup - Awarded to the U Sports Canadian football champion
+
+**Golf**
+
+Claret Jug - Awarded to the winner of The Open Championship.
+
+Ryder Cup - Awarded to the winner of a biennial competition between Europe and the USA.
+
+**Horse racing**
+
+Arlington Million Trophy - Awarded to the winner of the Arlington Million
+
+August Belmont Trophy - Awarded to the winner of the Belmont Stakes
+
+Haskell Invitational Trophy - Awarded to the winner of the Haskell Invitational Stakes
+
+Kentucky Derby Trophy - Awarded to the winner of the Kentucky Derby
+
+Kentucky Oaks Trophy - Awarded to the winner of the Kentucky Oaks
+
+Man o' War Cup - Awarded to the winner of the Travers Stakes
+
+Triple Crown Trophy - Awarded to the winner of the United States Triple Crown of Thoroughbred Racing
+
+Woodlawn Vase - Awarded to the winner of the Preakness Stakes. Most valuable trophy in sports at \$4,000,000+ US dollars. Designed by Tiffany & Co. in 1860
+
+**Hurling**
+
+Liam MacCarthy Cup - Awarded to the winners of the All-Ireland Senior Hurling Championship.
+
+**Ice hockey**
+
+- Aurora Borealis Cup - Awarded to the Naisten Liiga's playoff champion
+- Clarkson Cup - Awarded to the top team in Canadian women's ice hockey
+- Gagarin Cup - Awarded to the Kontinental Hockey League's playoff champion
+- Kanada-malja - Awarded to the Liiga's playoff champion
+- Le Mat Trophy - Awarded to the Swedish Hockey League playoff champion
+- O'Brien Trophy - Awarded to the National Hockey Association playoff champion from 1910 to 1917. Awarded to the National Hockey League (NHL) playoff champion from 1921 to 1927. After the 1927 NHL playoffs, the trophy was re-purposed and awarded for other accomplishments, before it was retired from use in 1950.
+- Memorial Cup - Awarded to the winner of the Canadian Hockey League
+- Stanley Cup - Awarded to the NHL's playoff champion. Previously served as a challenge cup for Canadian clubs from 1893 to 1914, and as the trophy for interleague tournaments from 1914 to 1926. It became the de facto NHL playoff trophy in 1927, and the de jure NHL playoff trophy in 1947 through an agreement with the Stanley Cup trustees.
+- Spengler Cup - Awarded to the winner of a invitational tournament hosted by HC Davos
+
+**Lacrosse**
+
+- Champion's Cup - Awarded to the National Lacrosse League champion
+- Mann Cup - An Indoor Lacrosse trophy awarded to the senior men's lacrosse champions of Canada.
+- Steinfeld Cup - Awarded to the Major League Lacrosse champion
+
+**Motorsport**
+
+-APBA Gold Cup - Awarded to the Detroit Gold Cup H1 Unlimited Champion. 
+-British Grand Prix Trophy - Awarded to the winner of the Formula One British Grand Prix. 
+-Borg-Warner Trophy - Awarded to the Indianapolis 500 Champion. 
+-Harley J. Earl Trophy - Awarded to the Daytona 500 Champion. 
+-Sprint Cup Trophy - Awarded to the NASCAR's Sprint Cup Series Champion 
+
+**Tennis**
+
+Wimbledon tennis trophies - although having no formal name, a cup is presented to the Wimbledon Men's (Gentlemen's) Singles Champion (The All England Lawn Tennis Club Single Handed Champion of the World, as stated on the cup itself). The women's (Ladies) Singles winner is presented with the Venus Rosewater Dish. Other trophies are presented to the winners of the Doubles and Mixed Doubles.
+
+**Rugby football**
+
+Rugby league
+
+Challenge Cup - rugby league's oldest knock-out competition. Notable for the wide range of teams which start, some taken from amateur ranks, "developing nations" and university team
+
+Paul Barrière Trophy - awarded to the champions of the Rugby League World Cup
+
+Rugby union
+
+Bledisloe Cup - Awarded annually to the winner between New Zealand and Australia.
+
+Calcutta Cup - Awarded annually to the winner between England and Scotland in rugby union
+
+Webb Ellis Cup - Awarded to rugby union's World Champion
+
+**Sailing**
+
+America's Cup - Awarded to Yacht Racing Champion
+
+Jules Verne Trophy - Awarded to the any type of yacht that circumnavigate the world the fastest
+
+**Military**
+
+The United States military also issues a type of trophy which are known as "non-portable decorations". This indicates that the trophy carries the status of a military award, but is not meant to be worn on a uniform but rather is presented for static display. Such military trophies include athletic excellence awards, unit excellence awards, and superior service awards presented annually to the top service member of a command.
+
+**Professional awards**
+
+Several actors and actresses with "Oscar statuette" in hand. The award is issued by the Academy of Motion Picture Arts and Sciences.
+Many professional associations award trophies in recognition of outstanding work in their respective fields. Some examples of such awards include:
+
+- Academy Award - Awarded by the American Academy of Motion Picture Arts and Sciences for excellence in the Film Industry.
+- Collier Trophy - Awarded by the US National Aeronautics Association for outstanding work in aviation engineering.
+- Harmon Trophy - Awarded by the Clifford B. Harmon Trust for outstanding achievement in aviation or ballooning.
+- Tony Award - Awarded by the American Theatre Wing and The Broadway League for excellence in live theater in New York City.
+- Emmy Award - Awarded by the Academy of Television Arts & Sciences and National Academy of Television Arts and Sciences for excellence in the Television industry.
+- Grammy Award - Awarded by the National Academy of Recording Arts and Sciences for excellence in the Music industry.
+- Golden Globes - Awarded by the Hollywood Foreign Press Association recognizing excellence in film and television. The statuettes are manufactured by the New York firm Society Awards.
+- MTV Video Music Award - Awarded by MTV to honor the best in the music video medium. The moonman is manufactured by the New York firm Society Awards.
+- Academy of Country Music Awards - Awarded for achievements in country music. The "hat" trophy is manufactured by the New York firm Society Awards.
+- Billboard Music Award - Awarded by billboard to honor outstanding chart performance. The trophy is manufactured by the New York firm Society Awards.
+- NAACP Image Award - Awarded for excellence in film, television, music, and literature by outstanding people of color. The trophy is manufactured by the New York firm Society Awards.
+- D\&AD Awards - Awarded for excellence within design and advertising
+

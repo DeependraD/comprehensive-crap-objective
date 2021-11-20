@@ -1,0 +1,10 @@
+
+## Chronology of historical events
+
+```{r historical-event-dates}
+read_csv("./data/nepal_memorable_date_occassions.csv", skip = 1) %>% 
+  knitr::kable(booktabs = TRUE, longtable = TRUE) %>% 
+  kableExtra::kable_styling(latex_options = "striped", font_size = 10) %>% 
+  kableExtra::column_spec(column = 1:2, width = c("22em", "6em"))
+```
+

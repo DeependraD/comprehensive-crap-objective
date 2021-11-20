@@ -1,0 +1,423 @@
+# World history
+
+## Ancient world
+
+### Bronze age civilizations
+
+```{r bronze-age}
+readxl::read_xlsx("./data/bronze_age_civilization.xlsx", skip = 1) %>% 
+  knitr::kable(caption = "A summary of eras representing Bronze age civilization", booktabs = TRUE)
+```
+
+**Mesopotamian civilization**: The oldest civilization of the world mesopotamia means 'land between the rivers'. Mesopotamia is the land between the Tigris and Euphrates rivers. Mesopotamia comprises four regions: Sumer (Southernmost region), Babylonia and Akkad (Middle region) and Assyria (Northernmost region).
+
+Hammurabi (C. 2100 BC), the greatest Babylonian ruler, united the whole of what is now called Iraq into a single Kingdom. Hammurabi gave his people a code of laws. His code covered every aspect of life. His code was based on the law of "eye for eye" and "tooth for tooth", i.e., the law of "tit for tat".
+
+Hittites, who came from Asia Minor (now Turkey) and destroyed the Babylonian kingdom, were the first to make regular use of horses for war chariots and to make iron implements.
+
+The potter's wheel was perhaps first used in Mesopotamia.
+
+The Mesopotamians also seem to have been the first to make glassware.
+
+The sumerians were the first to evolve a proper system of writing. This system is called cuneiform. The cuneiform script was invented in C. 3400 BC. This script is found on clay tablets. The cuneiform script was deciphered by Henery Rawlinnson.
+
+The Mesopotamian system of counting is known as sexagesimal because the Mesopotamian people counted by sixties as we count by tens (decimal system). Their sexagiesmal system is no longer in use but we still use it as the basis of division of time into minutes and seconds and of a circle into 360 degrees.
+
+In geometry, the Mesopotamians had discovered what was later called the Pythagoras' theorem.
+
+In astronomy, the Mesopotamians made astonishing progress. They could calculate the length of the day and the night. They divided the whole day into 24 hours. They divided the sky into 12 parts, each assigned a name. This has come down to us as the 12 signs of zodiac or rashis. Another remarkable achievement of the Mesopotamians was the invention of a lunar calender, based on the moon.
+
+**Egyptian civilization**
+
+- Egypt is called the "Gift of the Nile"
+- Historians divide the history of Egypt into three periods: the Old kingdom, the Middle Kingdom and the New Kingdom.
+- The old kingdom is also called the Age of the pyramids
+- The Egyptian king was called the pharaoh.
+- The Egyptian were the worshipper of the nature and the sun was their most important god.
+- The Egyptians believed that after death both the body and the soul live while other people believed that only the soul lives and body perishes. So egyptian took great care in preserving the body of the dead. The body was embalmed in spieces and then wrapped in strips of the fine linen. Such a preserved body is called a mummy. The mummy was put in a wooden box and buried.
+- The Pyramids and the Sphinx are the two specimens of Egyptian architectural excellence.
+- The Pyramids were the tombs of kings and they contained the mummies of these monarchs. The most imposing of all is the Great Pyramid at Gizeh in Cairo, built by the king Cheops (Khufu) of the old kingdom. The great pyramid is one of seven wonders of the ancient world.
+- The sphinx is a mythological animal with the body of a lion and the head of a man. Each sphinx was carved out of a single solid stone.
+- The Egyptian script, known as hieroglyphic, was invented in C. 3100 BC. The script is found on papyrus sheets made of reeds. The Egyptian script-hieroglyphic script - was deciphered by Champollion.
+- The Egyptians developed a decimal system of numeration.
+- The crowining achievement of the Egyptians was the solar calender.
+
+**Harappan civilization (Indus valley civilization)**
+
+The Indus Valley Civilisation (IVC) was a Bronze Age civilisation in the northwestern regions of South Asia, lasting from 3300 BCE to 1300 BCE, and in its mature form from 2600 BCE to 1900 BCE. Together with ancient Egypt and Mesopotamia, it was one of three early civilisations of the Near East and South Asia, and of the three, the most widespread, its sites spanning an area stretching from northeast Afghanistan, through much of Pakistan, and into western and northwestern India. It flourished in the basins of the Indus River, which flows through the length of Pakistan, and along a system of perennial, mostly monsoon-fed, rivers that once coursed in the vicinity of the seasonal Ghaggar-Hakra river in northwest India and eastern Pakistan.
+
+The civilisation's cities were noted for their urban planning, baked brick houses, elaborate drainage systems, water supply systems, clusters of large non-residential buildings, and new techniques in handicraft (carnelian products, seal carving) and metallurgy (copper, bronze, lead, and tin). The large cities of Mohenjo-daro and Harappa very likely grew to containing between 30,000 and 60,000 individuals, and the civilisation itself during its florescence may have contained between one and five million individuals. Gradual drying of the region's soil during the 3rd millennium BCE may have been the initial spur for the urbanisation associated with the civilisation, but eventually also reduced the water supply enough to cause the civilisation's demise, and to scatter its population eastward.
+
+The Indus civilisation is also known as the Harappan Civilisation, after its type site, Harappa, the first of its sites to be excavated early in the 20th century in what was then the Punjab province of British India and now is Pakistan.
+
+**Chinese civilization**
+
+- The earliest Chinese civilization is the Shang civilization.
+- The shan dynasty was overthrown by the Chou dynasty.
+- The chinese script is a pictographic script. It is remarkable that the chinese script has changed very little since the earliest times.
+- The chinese calender -- solar-lunar calender, was a combination of solar and lunar calender. The chinese were the first to calculate the length of the years as 365 1/4 days.
+- In 3rd century BC, the Chin dynasty became important. To keep out invaders from the north, the emperor ??? began constructing a wall known as the Great wall.
+- The Han dynasty followed the Chin dynasty in 202 BC and the Han emperors rule China for almost 400 years.
+- The political practices of the Han rulers were greatly influenced by the teachings of Confucius. During Han rule, to quality for appointment, the youngmen had to pass through an elaborate system of examination before they were chosen. Such "scholar-officials" came to be known as mandarins. The chinese was the first civilization in history to have a system of selecting public officials on the basis of education and competative examination.
+- Under the Hans, silk was a principal item of export.
+- Two main roads were built across the Great wall to carry on trade with the West.
+- The two major religions of ancient China are Taoism (based on the techings of Lao-tse: 604 BC) and Confucianism (based on the teachings of Confucius 551 BC-479 BC). Confucius was a contemporary of Mahavira adn Buddha.
+- Buddhism was brought into China by Indian during the Han rule.
+- The Great Wall is a mighty monument to the building skill of ancient China. This wall, built of stone and earth to a height of 6 m and extending over 2400 km.
+- The Chinese script was standardized by the Chin ruler. The chinese script spread to other countries also. It influenced the Japanese, Korean and Vietnamese scripts.
+- In the 1st century AD, paper was invented in China. The invention of paper and its importance in spreading knowledge within the outside China makes it one of the great contribution of China to the world.
+- Some of the first historical works in the world were written in China. Each dyansty compiled its own history. The pattern of these histories was set by Ssuma Chien (1st or 2nd century BC), and is commonly remembered as the "Herodotus of China".
+- The water clock, abacus, umbrella were invented by Chinese.
+- In the 2nd century AD, Chinese invented a seismograph.
+
+**Iranian civilization**
+
+- In the middle of the 6th century BC, a powerful empire -- Achaaemenid empire arose in Iran (Persia). The founder of this empire was Cyrus with his capital at Pasargadae.
+- He was succeeded by Darius I (522 BC - 486 BC). The empire reached its greatest extent under him and covered entire Iran, Mesopotamia, Syria, Egypt, Asia minor and north-western India. He build a new capital at Persepolis.
+- Darius I and his successors were involved in wars with the Greek states. They were defeated by Greeks. Alexander dealt the empire a final blow during the reign of Darius III.
+- In the 3rd century AD, a new and powerful empire -- Sassanid empire -- arose in Iran. This empire which was founded by Ardashiri in 226 AD held sway in Iran up to the middle of the 7th century AD.
+- The Arabs, who emerged as a strong power after the rise of Islam, conquered Iran in 651 AD.
+- The Achaemenids had introduced the use of money -- coins of gold and silver -- on a large scale throughout the empire.
+- Iran in ancient times produced a number of famous sailors and explorers. One of them, scylax undertook a voyage from the mouth of Indus to Egypt on order of Darius.
+- The main religion of the ancient Iranians was Zoroastrianism. This religion was founded by Zoraster (628-551 BC) as the Greeks called him in 7th century BC. The teachings of Zarathustra said that the world consists of two forces -- good and evil. The god, Ahura Mazda represents the forces of good and Ahirman, the forces of evil. The sun and the fire came to be worshipped as visible symbols of Ahura Mazda, who represents light. Both Judaism and Christianity indebted to Zoroastrianism.
+- During the Achaemenid empire the official language was Aramaic. The Sassanids revived old persian and made it the official language of their empire. Buth then a new script called Pahlavi had also developed. The best known ancient literature of Iran is the Zend Avesta, which contains the work of Zarathustra.
+
+**Greek civilization**
+
+- Ancient Greece was a civilization belonging to a period of Greek history from the Greek Dark Ages of the 12th-9th centuries BC to the end of antiquity (c. AD 600). 
+- Immediately following this period was the beginning of the Early Middle Ages and the Byzantine era. 
+- Due to the conquests by Alexander the Great of Macedon, Hellenistic civilization flourished from Central Asia to the western end of the Mediterranean Sea. The Hellenistic period came to an end with the conquests and annexations of the eastern Mediterranean world by the Roman Republic, which established the Roman province of Macedonia in Roman Greece, and later the province of Achaea during the Roman Empire.
+- Classical Greek culture gave great importance to knowledge. Science and religion were not separate and getting closer to the truth meant getting closer to the gods.
+- In this context, they understood the importance of mathematics as an instrument for obtaining more reliable ("divine") knowledge.
+- The early greeks (or Hellens), like the Aryans in India, lived in tribes, each composed of a number of families under a leader. A group of tribes had a king.
+- The main occupation were agriculture and herding.
+- The early Greeks had many gods whom they imagined to be like human beings, though more powerful and immortal. Zeus was the god of the sky and hence caused thunder. Poseidon, god of sea, raised stroms that sank ships.
+- Appollo, the sun god, could reveal the future. Athena, was the goddess of victory and patroness of the arts. Dionysus was the god of wine and there were many others. The Greeks thought their gods live on Mount Olympus.
+- Around 800 BC, groups of Greek villages began joining into larger units to form city-states. At the highest point in a city-state, an acropolis or citadel was built for defense and city spread out around the acropolis. Such cities were Sparta, Athens, Macedonia, Corinth, Thebes and others. Sparta and Athens were two most important city-states.
+- The Spartan's main concern waws with militarism and war so much so that the word spartan is often used to mean militaristic.
+- Spartans were fine soldiers, but they contributed little else to Greek culture.
+- The city-state of Athens developed along lines quite different Sparta. The territories it ruled had been occupied gradually and peacefully and militarism had not developed. Athens had excellent harbours and mineral deposits. Athenians built a prosperous trade and culture. Pericles (469 BC - 429 BC) was the most important ruler of Athens.
+- The Battle of Marathon (490 BC): The Greek defeated the Iranian (Persian) king Darius I at Marathon near Athens.
+- The peloponnesian war, between Sparta adn Athens from 431 BC to 404 BC ended in tragedy for Athens.
+- Philip of Macedonia conquered most of states in the years following Athens defeat.
+- Then his son, Alexander, set our at the age of 20 -- to conquer the world.
+- During the 13 years (336 BC - 323 BC), he compelled all Greece to accept his leadership and conquered the Achaemenid empire. This brought him to borders of India where he defeated king Porus on the Jhelum in 326 BC. He sailed down the Indus and then returned to Mesopotamia where he died of fever in 323 BC at the age of 32.
+- Alexander's conquests brought many important changes to the world. Trade between Europe and Asia was developed. Many new cities were founded.
+- In the 2nd century BC, the Roman empire started expanding eastward. As a result of Roman attacks, almost the entire territory of the Greeks and their empire became a part of the Roman empire.
+
+Contributions of Greek Civilization
+
+- The glory of Greece that the world has never forgotten was largely the glory of Athens at the time of Pericles.
+- The Olympic games were first held in 776 BC by the Greeks in honour of God Zeus at Mount Olympus (Olympia) in Greece, hence the name, and they continued till 394 AD. From 394 AD these games started degenerating and by 580 they altogether vanished. They were banned by the Roman Emperor Theodosius as Pagan manifestations.
+- It was the French Baron, Pierre de Coubertin, who (nearly over 1500 yeas after the lsat ancient Olympics) revived these games in 1894 and the modern series of the Olympic games started in 1896 at Athens and since then they are being held every fourth year.
+- Homer's Illiad and Odyssey are among the best epics of the world. The Illiad is the story of seize and destruction of the city of Troy, as the western coast of Asia Minor. The Odyssey describes the adventure and home coming, from Troy, of a Greek hero, Odysseus.
+- The founder of Greek tragedy was Aeschylus, author of "Promethus Bound" Sophoclesis considered the greatest of Greek tragedians. His famous plays are "Oedipus Rex", "Antigone" adn "Electra". Aristophanes is considered the master of greek comedy.
+- Greece produced some of the world's earliest great historians e.g. Herodotus (known as "the father of History"), Thucydides, Plutarch etc.
+- The most famous philosphers of Greece were socrates, Plato (disciple of Socrates and author of "Republic"), and Aristotle (disciple of Plato). Aristotle was both philosopher and scientist. He made important contribution to philosophy, medicine, biology and astronomy. He believed in the principle of the Golden Mean, that is, neither extreme luxary nor self-denial.
+- The Greek made many contributions to mathematics, especially to geometry as is seen in the work of Euclid and Pythagoras.
+- In medicine, Hippocrates laid the foundation of modern medicine. He is known as the "father of medicine".
+- The most important astronomers were: Aristarchus, Ptolemy, Hipparchus, Eratosthenes, etc. Ptolemy's belief that the earth was the centre of the universe was accepted as truth untill the 16th century. Eratosthenes prepared a fairly accurate map of the globe and was the first to suggest that one could reach India from Europe by sailing west.
+- The temple of Athena, the Parthenon, is the best example of Greek architecture. Myron and Phidias are two best-known sculptors of ancient Greece. It was Phidias whom Pericles appointed to supervise the construction of the Acropolis in Athens.
+
+**Roman civilization**
+
+- The centre of the Roman civilization was Italy, the peninsula that projects into the mediterranean sea in the west of Greece. The river Tiber on which the city of Rome is located runs through the central part of the peninsula.
+- The city of Rome was founded about 1000 BC by Romulus, in the district of Latium. The language of the ancient Romans, Latin, gets its name from Latium.
+- The early Romans had a king, an assembly and a senate.
+- Towards the end of the 6th century BC the king was overthrown and a republic was established. Under the Rupublic the Romans conquered other parts of the peninsula, and by 265 BC controlled all of Italy. The political system of the Roman republic consisted of two consuls, the senate and the assembly.
+- The Romans were involved in a series of wars with carthage, a city on the north coast of Africa. The dander of Carthaginian occupation of Sicily led the Romans to attak Carthage. The wars that followed, known as the Punic Wars, lasted from 264 BC to 146 BC. The Carthagininans were defeated in this war.
+- By the beginning of the 1st century BC, the Roman had conquered Greece and Asia Minor and established a protectorate over Egypt.
+- Rivalry for power grew between two generals, Pompey and Julius Caesar. War between them followed and Pompey was murdered by his enemies in Egypt. Caesar remained in Egypt for some time, attracted by the captivatin beauty of the Egyptian queen Cleopatra. On his return to Rome, in 46 BC, he made himself dictator. However, on the charge that Caesar intended to become king he was assassinated in 44 BC, in a senate meeting.
+- After the assasination of Caesar, power passed into the hands of Mark Antony and Lpidus, Caesar's friends and Octavian, Caesar's grand-nephew. The leaders of the conspiracy, Brutus and Cassius, fled and organized a large army but they were captured and slain.
+- In 37 BC, Octavian became the most powerful man in the Roman empire. He ruled for 44 years under the title of Augustus Imperator, meaning "holy victorious-general". He also called himself Princeps, "first citized of the state". The period of Roman history beginning with his rule up to 284 AD is called "the Principate". His rule and the period following it were peaceful and are known in history as Pax Romana, which means 'Roman peace'.
+- In 284 AD, Diocletian became ruler. From this time on, Roman civilization declined more rapidly. One of Dioclectian's successor, Constantine, built a new capital called Constantinople, on the site of ancient Byzantium, in 330 AD.
+- Not long after, the Roman empire was divided into two empires -- Western and Eastern. The Western part soon broke into many pieces. But eastern part called as Byzantine empire, continued for a thousand years more.
+- The final blow to the Roman empire at the hands of northern invaders they were German tribes. By 476 AD, the once powerful Roman empire was no more.
+- The Roman worshipped as many gods and goddesses as the Greeks. Jupiter sent rain for the crops; Mars helped them in war; Mercury carried their messaaes; Neptune was the god of sea; Vesta guarded the home; Juno protected their women.
+
+Contributions of Roman Civilization
+
+- Roman law and principles of governance are Rome's greatest contribution to the world.
+- So complete was Rome's system of road linking all parts of empire that people could say "All roads lead to Rome".
+- The Roman developed their own alphabet and the Latin language became language of all educated people in western Europe. Latin words are still widely used in science, and forms basis of several European languages -- especially French, Spanish and Italian.
+- Lucretius, Cicero, Marcus Aurelius and Seneca were the famous Roman philosophers.
+- Horace ('Odes') and Virgil ("Aeneid") were the famous Roman poets.
+- Tacitus ("Annals" and "Histories") was the most famous Roman historian and Pliny the elder, was the another famous Roman historian.
+- The Romans were the inventors of concrete and could firmly cement bricks and stones together. They also introduced two architectural improvements -- the arch and cupolas or domes.
+- Fights between gladiators or between a gladiator and a wild animal, was a popular Roman amusement. Special arenas or amphitheatres were built for these contests. The ruins of the Colosseum, one of the greatest of arenas, can be seen in Rome.
+
+
+### Medieval world (500 AD - 1500 AD)
+
+Medieval Europe
+
+- The Eastern Roman empire or Byzantine empire was a vast empire and its capital Constantinople was the largest city of the time.
+- The Byzantines built beautiful churches. The most famous of these is the church of St. Sophia in Constantinople. The church was built during the reign of Byzantine emperor Justinian in the 6th century AD.
+- The Ottoman Turks conquered the Byzantine territories in 1453.
+
+Feudalism
+
+- The word "feudal" comes from feud which originally means a fief or land held on condition or service. In a feudal society, land was the source of power.
+- Feudalism originated in the 8th and 9th centuries.
+- First of all in western Europe the feudal system developed
+- The main division in feudal society was between "feudal lords", who either got a share of the peasants' produce or had peasants to work on their lands without any payment, and "Peasants", who worked on the land.
+
+Feudal Hierarchy
+
+1. Feudal lords: a. Kings, b. Dukes and Earls c. Barons d. Knights
+2. Peasants: Three categories of peasants -- Freeholders, villeins and serfs. In feudal hierarchy, the king stood at the top and peasant stood at the bottom.
+- The economic life under the feudal system was predominantly rural. The use of land, which was like a village-farm, was called "manor".
+
+Crusades (1095 AD -- 1291 AD)
+
+- Crusades means the military expeditions, under the banner of the cross organized in western christendom primarily to recover the Holy Places of Palestine from Muslim occupation.
+- Four crusades were fought by the European Christian to liberate Jerusalem from Selijuq Turks (Muslims) who did not permit Christian pilgrims to enter the holy land.
+- The 1st Crusade (1095-99) was launched after the provoking preaching of Pope Urban II, Jerusalem was captured and the Crusader states of the kingdom of Jersusalem, the country of Edessa, Antioch and Tripoli were created.
+- The fall of Edesa (1144) inspired the unsuccessful IInd crussade (1147-48).
+- The capture of Jerusalem by Saladin in 1187 led the inconclusive IIIrd crusade (1189 - 92), led by Philip II Augustus of France, Frederich I Barbarossa of Germany, and Richard I (the "Lion Heart") of England.
+- The IVth Crusade (1202 - 91) was diverted from its original objective, Egypt and sacked Constantinople (1204). This Crusade failed to recover lost ground and Acre, the last foothold of West is Palestine, was lost in 1291.
+
+**Arab civilization**
+
+- In the 7th century, a new religion, Islam, arose in Arabia, which led to the establishment of a big empire.
+- Muhammad, the Prophet of Islam, was born in Mecca in 571 AD.
+- When he was 40, he had 'visions of truth' and became a prophet.
+- Muhammad's vision completely convinced him that Allah was the only god.
+- He forbade the worship of idols and made many enemies. Ultimately, he had to leave Mecca and take refuge in Medina. This event took place in 622 AD and is known as the year of Hijira, or migration, and from it Muslims date their era (Hijira Samvat).
+- The Quran, the holy book of Islam, is divided into a number of suras, or chapters, and contains the teachings of Muhammad. Besides the Quran, the life of a muslim is guided by the Sunna, the practices of Muhammad, and the Hadees, the sayin of the Muhammad.
+- Muhammad was not only a religious leader but also a political leader.
+- After his death (632 AD), his successor, were known as Caliphs, or Khalifas who held both religious and political authority.
+- Nearly all Arabia had accepted the new religion and become a unified state before the detah of Prophet Muhammad in 632 AD.
+- From Arabia, Islam spread very fast to many other parts of the world. Within a hundered years, the Khalifas and their generals, had conqured Iran, Syria, Egypt, Central Asia, North Africa and Spain. The Arab empire was the largest that world had so far seen.
+- The first three Khalifas rule from the city of Medina. Then the capital was shiften Kufah.
+- By 660 AD, when the Omayyad dynasty took over the reins of government, the principal city was Damascus.
+- About 750, the Omayyad were overthrown by Abbasids, who made Baghdad their capital. Harun Rashid, famous in many legends, was an Abbasid ruler.
+- The Abbasids ruled for about 300 years, till the Seljuq Turks took Baghdad and ended the Arab rule. During the next four centuries, the Turks dominated the Islamic world.
+- In the 15th century, most of these territories came under the domination of the Ottoman Turks. It was the Ottoman Turks who took Constantinople and ended the Eastern Roman empire in 1453.
+
+Contributions of Arab civilization
+
+- The establishment of a vast empire facilitated the coming together of intellecutal and scientific traditions of various civilizations, particularly Greek, Iranian and Indian. The Arabs made all knowledge their own and developed in further.
+- Al Razi (Rhazes), an Arab scientist discovered the true nature of small pox, and Ibn Sina (Avicenna) discovered that tuberculosis is infectious.
+- In Mathematics, the Arab leaerned the Indian numerals (Hindsah) and spread their use far and wide, so that in the West they are to this day called Arabic numerals.
+- Some of the famous literary work of the Arab civilization are the 'Rubaiyat' by Omar Khayyam, 'Shahnama' by Firdausi and the 'Arabian Nights', a collection of 1001 stories.
+- The Arabs developed their own decorative designs. Their buildings had bulblike domes, small minarets, horse-shoe arches and twisted columns.
+- The Arabs also developed a decorative style of writing called Calligraphy and made book-illumination an art.
+- Arab carpets, leather work, beautiful swords, silks, inlays, metal-work, and enamelled glassware were prized everywhere.
+
+### Seven wonders of ancient world
+
+The seven wonders of the ancient world were seven outstanding objects that were built in ancient times. Today, only the pyramids are still standing. All the rest have been destroyed by earthquakes, fire or invaders. These seven wonders are arranged here in the order in which they were built.
+
+The pyramids of egypt
+
+(Giz, Egypt; built from 2700 to 2500 BC)
+
+They were built as royal tombs for the Egyptian pharoahs. There are many ancient pyramids in Egypt, but the greatest are the three at Giza. The largest of these is the Great Pyramid of Cheops which stands about 146 m high.
+
+The hanging gardens of Babylon
+
+(Iraq; built around 580 BC)
+
+These were spectacular gardens, rising in a series of terraces (rather than hanging). They were built by king Nebuchadnezzar II for his wife. Nothing remains of them.
+
+The statue of Zeus at Olympia
+
+(Greece; made around 457 BC)
+
+It was a wooden statue of the king of the gods, Zeus, covered with gold and ivory. This 12 m high majestic seated figure was created by the sculptor Phidias.
+
+The temple of Artemis (or Diana) at Ephesus
+
+(Turkey; built around 400 BC)
+
+It was one of the largest temples in the ancient world built mostly of marble in honor of a Greek goddess, Artemis. Some of its marble columns are in the British Museum in London.
+
+The Tomb of Mausolus
+
+(Turkey; built around 353 BC)
+
+This was a magnificient tomb of Mausolus, a ruler of Caria, built at Helicarnassus by his widow. It was a very massive tomb of white marble.
+
+The colossus of Rhodes
+
+(Greece; built around 280 BC)
+
+It was a huge, bronze statue of Sun god Helios, stood at the entrance of the harbour of Rhodes. It was about 30 m high.
+
+The Pharos of Alexanderia
+
+(Egypt; built around 270 BC)
+
+This was the largest lighthouse of the ancient world, built on the island of Pharos in the harbour of Alexandria by Ptolemy II. It was about 135 m tall. It had a wood fire burning on top and its light could be seen 65 km away.
+
+
+## World war I
+
+```{r world-wari-timeline}
+
+read_csv('./data/world_war_first_1914-22_timeline.csv') %>% 
+  mutate(Events = str_remove_all(Events, pattern = "\\[\\d*\\]")) %>%
+  knitr::kable(caption = "A timeline of major events of the World War I", longtable = TRUE, booktabs = TRUE) %>% 
+  kableExtra::kable_styling(latex_options = c("hold_position", "striped")) %>% 
+  kableExtra::column_spec(column = 3, width = "22em")
+
+```
+
+## World war II
+
+Causes of second world war:
+
+- Expansionism
+- Militarism
+- Nationalism/Jingoism
+- Interrelations and economics
+  - Problems with the treaty of versailles
+  - French security guards
+  - Paris peace conference, 1919
+  - Germany's reaction to treaty of versailles
+  - Japan's seizure of resources and markets
+  - Failure of the leagure of nations
+  - The Mason-Overy debate: "The flight into war" theory
+- Specific developments
+  - Nazi dictatorship
+  - Re-militarization of the Rhineland
+  - Italian invasion of Ethiopia (Abyssinia)
+  - Spanish civil war
+  - Second sino-japanese war
+  - Anschluss
+  - Munich agreement
+  - German occupation and slovak independence
+  - Italian invasion of Albania
+  - Soviet-Japanese border war
+  - Danzig crisis
+  - Police alliance with the Entente
+  - Molotov-Ribberntrop pact
+  - Invasion of poland
+  - Invasion of the Soviet Union
+  - Attacks on Pearl Harbor, the Philippines, British Malaya, Singapore and Hong Kong
+  
+source: \url{https://en.wikipedia.org/wiki/Timeline_of_World_War_II}
+
+For a complete discource refer to @woodruff2016concise. Also refer to Philip's atlas of World's history.
+
+## Cold war
+
+For more than 45 years following the end of World War II, the Cold War dominated political relations between the United States and the Soviet Union, as well as with many other nations of the world. It cast, moreover, a long shadow over the American domestic scene and became a central part of life in the Soviet Union and other communist nations. The state of political tension and military rivalry that was the Cold War, while it did not result in outright combat between the two principals, spawned numerous proxy wars and international incidents. It was a "war" like no other. Arising out of the chaos of postwar Europe and from US and USSR foreign policy aims, the Cold War was responsible for the nuclear arms race, the division of the world into Communist and non-Communist states (along with non-aligned states), violent confl icts in the developing world, and the polarization of political ideologies and wills. It created population shifts, major economic disruptions, and vast changes in the social, cultural, and intellectual landscapes of many of the nations involved. It loomed so large in the second half of the twentieth century that few, if any, of the world's inhabitants escaped its reach.
+
+Emergence
+
+At the start of World War II, six great powers existed in the world: Great Britain, France, Germany, the Soviet Union, Japan, and the United States. By the end of the war, none but the United States retained the kind of economic and military might that qualifi ed it as an undisputed global power. That status was reinforced by the fact the only the United States possessed-and had used-atomic weapons. America also had enormous manufacturing capacity, vast domestic and foreign oil reserves, and had endured none of the devastation of its homeland that the other countries had. The US-sponsored Marshall Plan for the reconstruction of Western Europe, and the subsequent US-led North American Treaty Organization (NATO), meant that key centers of political and economic growth and development were aligned with the United States against the Soviet Union and its Eastern Bloc of communist states. Japan, too, operated as a US client state during the postwar period and after. 
+
+The Soviet Union, despite having been hard hit by the war, entered the postwar period with signifi cant territorial claims and prestige as a result of the role it had played in defeating Nazi Germany. It quickly imposed an "iron curtain," as Churchill (and some before him) memorably phrased it, around the areas it controlled in Central and Eastern Europe, namely, Poland, East Germany, Czechoslovakia, Hungary, Romania, and Bulgaria. (Yugoslavia became communist but kept its distance from Moscow; Albania, also communist, was aligned with the USSR.) Although these states were not comparable in their military-industrial potential to those in the west, the Soviets and their protégés made the most of what they had and sought to challenge Western claims to dominance, at least. The fact that movements inside countries such as Greece, Italy, China, Vietnam, and France were inspired by communist models of progress helped lend weight to the Soviet experiment. The Chinese Revolution of 1949, in particular, threw many Western observers for a loop. (Accusations over the "loss" of China remained a political staple for decades.) Inside the Soviet Union, technological advances came quickly enough to permit the testing of an atomic bomb in 1949. The arms race quickly advanced to the next level: development of a "super" bomb based on nuclear fusion and featuring greatly increased explosive power. The United States obtained such a weapon by 1952, and the Soviet Union by 1955.
+
+Thus, through a combination of jostling for power in an unsettled postwar environment and seeking superiority in arms, US and Soviet leaders unleashed on the world the decades-long struggle known as the Cold War. Almost from the start, American offi cials came to rely on a policy of containment, meaning resistance on every front to the apparent expansionist goals of the Soviet Union. For their part, Soviet officials often found themselves constrained by the need to support or fight battles they would not have chosen on their own. For every communist uprising abroad there arose the need to provide backing for it and, therefore, to adjust Soviet strategy accordingly. The same type of constraining action also impacted US policymakers as the Korean and Vietnam wars, with all their pitfalls, gave clear witness. Sadly, too, the Cold War gave Communist leaders the means to justify their repressive internal policies by arguing that those policies were a necessary response in the face of a dangerous external enemy. A similar kind of ideological narrowing occurred in the United States, particularly in the immediate postwar years when the House Un-American Activities Committee (HUAC) and Senator Joseph McCarthy succeeded in whipping up a great Red Scare, or anti-communist frenzy, across the nation. Many lives were ruined as a result.
+
+Entrenchment
+
+Throughout the Cold War, relations between the Soviet Union and the West alternated between periods of tension and crisis followed by periods of lessened tension and modest cooperation. Such crises included the Soviet blockade of Berlin (1948-49), US and USSR (as well as Chinese) involvement in the Korean War, Soviet threats to cut off access to West Berlin (1958), the erection of the Berlin Wall (1961), the Cuban missile crisis (1962), the Vietnam War (1962-75), and crises in the Middle East (1970, 1973). Although the two superpowers never engaged each other militarily, the Soviet Union and the United States both were involved in confl icts aimed at either drawing smaller states to their side or preventing them from going over to the other side. The Russians, for example, sent troops into Berlin (1953) to halt a workers' revolt, into Hungary (1956) to quash a popular uprising, into Czechoslovakia (1968) to topple a reformist government, and into Afghanistan (1979) to fortify a faltering Soviet puppet regime. In the mid-1970s, Moscow assisted the Cubans in sending in troops into Angola and Ethiopia to prop up Marxist governments. In the early 1980s, the Soviets threatened to use force to quell the Solidarity movement in Poland and to keep a weakend communist leadership in place.
+
+On the American side, the situation was not entirely different, even though the ostensible goal there was the preservation of democracy rather than the spreading of communism. The United States aided the overthrow of progressive or leftist governments in Iran (1953) and Guatemala (1954), supported a failed effort to overthrow Fidel Castro in Cuba (1961), sent troops to the Dominican Republic (1965) to prevent a communist government from taking power, and assisted in a military coup against a popular leftist government in Chile (1973), resulting in its replacement by a right-wing dictatorship. In 1983 the Reagan administration authorized the invasion of the tiny island nation of Grenada on anticommunist grounds, an action that took place just two days after the bombing of a US military barracks in Beirut. Critics viewed the Grenada attack as cover for an embarrassing US pullout in Beirut. The same administration also helped organize and maintain the contra movement in Nicaragua, aimed at felling the leftist Sandinista government there. 
+
+Policy-wise, there were ups and downs. Relations between the Soviet Union and the United States enjoyed a brief period of improvement after the death of Soviet dictator Joseph Stalin in 1953. This was evident during the Nikita Khrushchev-Dwight Eisenhower years in the form of the Geneva Summit of 1955 and the "spirit of Camp David" meeting of 1959, though neither encounter produced much of substance. In the later Khrushchev years a strategy of 'peaceful coexistence' was followed, yielding two arms-control agreements - a partial nuclear test-ban treaty and a compact regarding the use of a crisis hotline-with the administration of John F. Kennedy. During the Leonid Brezhnev-Richard Nixon years a policy of détente prevailed, producing several notable arms-limitation agreements and a string of Soviet-American summit meetings. The most important of the détente agreements was SALT I, which banned certain anti-ballistic missile defense systems and imposed a fi ve-year moratorium on the building of new strategic ballistic missiles (ground-to-ground and sea-to-ground missiles).
+
+Extinction
+
+One key precedent to the SALT concord was President Nixon's visit to China in early 1972, followed by his visit to Moscow. That strategy, aimed at playing the two communist nations off against one another and setting up the United States as a potential third-party friend (within limits), was itself made possible by an earlier Sino-Soviet split. Beginning in the 1960s, the Chinese and Soviets went their separate ways ideologically, and in 1969 even engaged in a brief border war. Their increasingly divided positions made possible Nixon's "opening" to China and subsequent discussions with the Soviets regarding mutual arms limitations. The consequent global arrangement contributed to a period of relative calm (with exceptions) during the 1970s. 
+
+With the Soviet invasion of Afghanistan in December 1979, however, and the election of conservative Ronald Reagan as US president in 1980, the Cold War seemed back on track. Troubles in Poland in 1980-81 added to that picture, even as some new twists occurred, such as the emergence of the fi rst trade union, Solidarity, not controlled by the Communist Party. Reagan fell back on describing the Soviet Union in biblical terms as an "evil empire" that surely must succumb to the righteous forces of the West. He proposed a space-age Strategic Defense Initiative toward ensuring that outcome, but the idea of sealing off the United States from missile attack was never accepted by the Soviets and proved technologically unfeasible in any event. Partly as a result of the war in Afghanistan, and defi nitely as a result of the arms race and the need to maintain its vast military, the Soviet Union found itself in a technological and economic downswing by the mid-1980s. The incoming premier at the time, Mikhail Gorbachev, undertook to implement major reforms, suggested by the bywords perestroika (reconstruction), glasnost (openness), and democratization. Gorbachev partnered with Reagan in 1986-87 to abolish all intermediate-range nuclear missiles; he pulled out Soviet forces from Afghanistan; he scaled-back or ended Soviet support of regimes in conflict situations worldwide; and he announced a brand of "new thinking" under which old rivalries and stale political formulas were to be abandoned in favor of a new era of ideological pluralism and positive international relations. All of this was unprecedented in Soviet-and world-history.
+
+In reaction to Gorbachev's loosening of central control, a series of popular uprisings occurred in Eastern and Central Europe between 1989 and 1990. Poland ended 40 years of Communist rule in August 1989 as a newly elected government came into power. Hungary, having permitted thousands of East German "holiday visitors" to pass through its territory on their way (covertly) to West Germany, then declared itself a democratic republic. In East Germany, after initially unleashing a hard-line response to popular disturbances, authorities relented and allowed citizens to exit the country; Berlin's Brandenburg Gate was opened on December 22 and the Berlin Wall soon came down. Likewise, hundreds of thousands of Latvians, Lithuanians, and Estonians joined hands in a human chain stretching across the three Soviet republics-and won their freedom. Elsewhere, Georgians, Ukrainians, Czechoslovaks, Romanians, and numerous other peoples across the Soviet Bloc pushed for radical reform, and got it. In Russia itself, voters brought in a group of reform candidates to a newly reconstituted parliament in 1989; after two additional years of great political upheaval, the Soviet Union was fi nally dissolved. Only in China was a student revolt (June 1989) in Beijing's Tiananmen Square put down permanently and a full-scale crackdown implemented to preserve complete Communist Party control. (In contrast, North Korea and Cuba, among other Communist states, never experienced-or allowed-unrest.)
+
+The Cold War ended with the extinction of the Soviet Union and, along with it, the competition between the two superpowers. The world suddenly became a more complex, multifaceted place in which the United States remained the sole global power. American politicians touted this as a "victory," even while the Soviet collapse was more likely a combination of external political pressures and internal social and economic factors. Despite the Cold War's end, however, no "calm and sober world" was forthcoming. Instead, new challenges and threats arose, including ethnic violence and the spread of terrorism. Russia under Vladimir Putin took a hard turn away from any rapprochement with the West, making moves to capture Eurasian territories reminiscent of the Soviet Union. While there may no longer be a Cold War today, there is certainly no widespread peace and prosperity, either.
+
+Source: Michael Shally-Jensen, PhD (Editor's introduction, The Cold War)
+
+## World language
+
+
+```{r world-language}
+
+read_csv('./data/world_top_spoken_languages.csv') %>% 
+  mutate_all(list(~str_remove_all(., pattern = "\\[\\d*\\]"))) %>%
+  knitr::kable(caption = "A list of top 20 spoken languages worldwide", longtable = TRUE, booktabs = TRUE) %>% 
+  kableExtra::kable_styling(latex_options = "striped") %>% 
+  kableExtra::column_spec(column = 1:5, width = c("4em", "6em", "5em", "8em", "12em"))
+```
+
+Source: Ethnologue (2019, 22nd edition)
+
+
+## Highest military decorations
+
+Victoria cross
+
+Victoria cross is the highest among all awards in the United Kingdom and supersedes the civilian awards too. It is a gallantry award bestowed to British Armed Forces. The second award in merit and degree after Victoria Cross is George Cross  which is awarded to civilians as well as Army personnel. Earlier Victoria Cross awards were given to Armies of Commonwealth countries but it no longer in practice now as most of commonwealth countries have established their own award system. This award was established in year 1856 by Queen Victoria herself to honor the heroes of Crimean War. Since then this award has been conferred to 1355 individuals.
+
+Order of Saint George
+
+Highest military decoration of Russia. This is one of the oldest Military Awards among countries of world and was established in 1769 during Russian Empire. The Order of Saint George is categorized in four classes: First class, Second class, Third class and Fourth class while first class being the highest order.
+
+Nishan-e-Haider
+
+Highest military decoration of Pakistan. Nishan-e-Haider means mark of lion. This honor is conferred to military personnel for showing exemplary courage and outstanding bravery in presence of enemy. This award was established in year 1957 and since its inception only ten people have been awarded all posthumously.
+
+
+Param vir Chakra
+
+Highest military decoration bestowed to Indian Armed Forces for extreme bravery and acts of supreme sacrifice in war time against enemy. The medal is made up of bronze disc 3.49 cm in dia. National emblem is engraved in center surrounded by four sets of Vajra (the mytical weapon). The medal was designed by Savitri Khanolkar, wife of Indian Army Officer Vikram Khanolkar. 21 Indian Armed Forces personnel have been awarded so far out of which 14 were honored posthumously.
+
+Legion of Honor
+
+Common highest Military award of France. This is to note that Legion of Honor is also the highest civilian award of France too. Unlike other countries who follow different awards for civilian and military, France uses the same award. This award has five categories with different ranks. These categories in descending rank (from top to bottom) are - 
+
+i) Grand Cross, 
+ii) Grand Officer, 
+iii) Commander, 
+iv) Officer, 
+v) Knight.
+
+Order of the Heroic Exemplar
+
+Highest military decoration awarded by Government of People's Republic of China. This award was established in 1951 to set examples for military men and to give inspiration and encouragement. At that time there were three classes of this medal - Special Class, First Class and Second Class. In 1988 Special class was eliminated by the People's Republic Army.
+
+Victoria cross (Canada)
+
+Highest military decoration and honor awarded to Canadian Forces or allies for most conspicuous bravery, daring or pre-eminent acts of valour, self sacrifice or extreme devotion towards duty in presence of enemy. The Canadian Victoria Cross is similar to the Victoria Cross award of other Commonwealth countries in design, shape and appearance. The only difference is that Canadian Victoria Cross is awarded for action not necessarily in war time situations but also for action against hostile forces, mutineers, pirates etc. Till date (March 2017) since the inception in 1993, no one has received this award.
+
+
+```{r military-accolades}
+read_csv("./data/world_highest_military_decorations_countrywise.csv") %>% 
+  mutate_all(list(~str_remove_all(., pattern = "\\[\\d*\\]"))) %>%
+  knitr::kable(caption = "Highest military decorations of different countries and their brief history", 
+               longtable = TRUE, booktabs = TRUE) %>% 
+  kableExtra::kable_styling(latex_options = "striped") %>% 
+  kableExtra::column_spec(column = 1:5, width = c("4em", "6em", "5em", "5em", "6em"))
+```
+
+
+## French revolution
+
+The social and political upheavals in France, spreading subsequently to most Europe over the generation after 1789, constitute the classic revolution of modern times. 
+
+The trigger for the French revoultion was a financial crisis. The government of King Louis XVI, already burdened by substantial debts incurred to finance midcentury wars, intervened between 1778 and 1783 in the American War of Independence in the hope of destroying the power of Great Britain. Taxing too little and borrowing too much on disadvantageous terms the king found himself by 1786 facing bankrupcy. To avoid it, an ambitious plan of reform was formulated, but when the plan was laid before a handpicked Assembly of Notables in 1787, members claimed, after much detailed criticism, that the only body competent to approve such far-reaching changes was the elected Estates-General, which had not met since 1614. From the dissolution of the Notables (May 1787) until August 1788 the government struggled to avoid convening a body that seemed bound to diminish hitherto absolute royal power. Financial paralysis, however, forced Louis XVI to convoke the Estates for 1789.
+
+The composition being three houses representing the orders of clergy, nobility, and third estate (comprising everyone else in the kingdom), numerically equal in membership but voting by order. Thus the first two "privileged orders" could outvote the third estate, even though it represented the vast majority of the nation. By the time of the elections in spring 1789, in reponse to massive publicity campaign, double representation had been conceded to the third estate, but it remained undecided whether votes would be counted by order, preserving the dominance of the clergy and nobility, or by head, which would give the third estate -- now doubled -- an equal vote. The issue, unresolved until six weeks after the Estates convened, dominated the elections, producing a groundswell of hostility toward the nobility.
+
+Frustrated by noble ineptitude, on June 17 the third estate, reinforced by a few renegade clergy, declared itself the National Assembly, with full soverign powers. Attempts by the king and certain nobles to resist the claims of the third estate, ultimately with the threat of military force, produced rising popular alarm, which culminated on July 14 with a revolt in Paris as a terrified, hungry populace scoured the city for arms. With the help of military mutineers, the people stormed the main state prison, the Bastille. Unsure of his troops' reliability, the king abandoned his resistance to the seizure of soverignty by the French nation's elected representatives.
+
+... continue
+
+source: \url{The Encyclopedia of Political Revolutions}
+
+## American revolution
+
+The American Revolution was a colonial revolt which occurred between 1765 and 1783. The American Patriots in the Thirteen Colonies defeated the British in the American Revolutionary War (1775–1783) with the assistance of France, winning independence from Great Britain and establishing the United States of America.
+
+The American colonials proclaimed "no taxation without representation" starting with the Stamp Act Congress in 1765. They had no representatives in the British Parliament and so rejected Parliament's authority to tax them. Protests steadily escalated to the Boston Massacre in 1770 and the burning of the Gaspee in Rhode Island in 1772, followed by the Boston Tea Party in December 1773. The British responded by closing Boston Harbor and enacting a series of punitive laws which effectively rescinded Massachusetts Bay Colony's rights of self-government. The other colonies rallied behind Massachusetts, and a group of American Patriot leaders set up their own government in late 1774 at the Continental Congress to coordinate their resistance of Britain; other colonists retained their allegiance to the Crown and were known as Loyalists or Tories.
+
+Tensions erupted into battle between Patriot militia and British regulars when King George's forces attempted to destroy American military supplies at Lexington and Concord on April 19, 1775. The conflict quickly escalated into war, during which the Patriots (and later their French allies) fought the British and Loyalists in the Revolutionary War. Each of the thirteen colonies formed a Provincial Congress which assumed power from the former colonial governments, suppressed Loyalism, and recruited a Continental Army led by General George Washington. The Continental Congress declared King George a tyrant who trampled the colonists' rights as Englishmen, and they declared the colonies free and independent states on July 2, 1776. The Patriot leadership professed the political philosophies of liberalism and republicanism to reject monarchy and aristocracy, and they proclaimed that all men are created equal.
+
+The Patriots attempted to invade Canada during the winter of 1775–76 without success, expecting like-minded colonists in British Canada to rally to the cause. The newly created Continental Army forced the British military out of Boston in March 1776, but the British captured New York City and its strategic harbor that summer, which they held for the duration of the war. The Royal Navy blockaded ports and captured other cities for brief periods, but they failed to destroy Washington's forces. The Continental Army captured a British army at the Battle of Saratoga in October 1777, and France then entered the war as an ally of the United States. Britain then refocused its war to make France the main enemy. Britain also attempted to hold the Southern states with the anticipated aid of Loyalists, and the war moved south. Charles Cornwallis captured an army at Charleston, South Carolina in early 1780, but he failed to enlist enough volunteers from Loyalist civilians to take effective control of the territory. Finally, a combined American and French force captured a second British army at Yorktown in the fall of 1781, effectively ending the war. The Treaty of Paris was signed September 3, 1783, formally ending the conflict and confirming the new nation's complete separation from the British Empire. The United States took possession of nearly all the territory east of the Mississippi River and south of the Great Lakes, with the British retaining control of Canada, and Spain taking Florida.
+
+Among the significant results of the Revolution were American independence and friendly economic trade with Britain. The Americans adopted the United States Constitution, establishing a strong national government which included an elected executive, a national judiciary, and an elected bicameral Congress representing states in the Senate and the population in the House of Representatives. Around 60,000 Loyalists migrated to other British territories, particularly to British North America (Canada), but the great majority remained in the United States. 

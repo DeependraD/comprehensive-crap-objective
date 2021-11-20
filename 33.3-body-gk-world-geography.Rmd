@@ -1,0 +1,196 @@
+# World geography
+
+## Some countries, currencies and their capitals
+
+## Water bodies
+
+### Rivers
+
+**Biggest**
+
+https://en.wikipedia.org/wiki/List_of_rivers_by_discharge
+
+**Longest**
+
+https://en.wikipedia.org/wiki/List_of_rivers_by_length
+
+### Lakes
+
+```{r}
+world_lakes <- read_csv("./data/world_lakes.csv")
+
+# world_lakes <- world_lakes %>% 
+#   mutate_all(list(~iconv(., to = "ASCII", sub = " "))) %>% 
+#   mutate_all(list(~str_squish(.)))
+# 
+# world_lakes %>% 
+#   mutate_all(list(~str_replace_all(., "\\[\\d+\\]", ""))) %>% 
+#   write_csv("./data/world_lakes.csv", "")
+
+world_lakes %>% 
+  knitr::kable(booktabs = TRUE) %>% 
+  kableExtra::kable_styling(font_size = 8) %>% 
+  kableExtra::column_spec(column = 2:8, width = c("6em", "6em", rep("5em", times = 4), "10em"))
+```
+
+
+## Strait
+
+A strait is natural narrow water way that connects two large water bodies. In other words it can be also be defined as a thin channel of water way which separates comparatively two enormous water bodies.
+
+Difference between strait and isthmus
+
+Isthmus is just opposite to a Strait. A thin piece of land which connects two bigger lands is called Isthmus. For example Isthmus of Panama connects North America and South America. A canal is generally built across an isthmus artificially to promote navigation from one part to other part by water. Panama canal is such an example which connects Atlantic ocean to Pacific ocean.
+
+Bering strait
+
+http://www.quickgs.com/wp-content/uploads/2015/08/bering-strait-300x175.jpg
+
+The narrow sea between the Bering strait connects Arctic ocean East Pacific ocean near the countries of USA (Alaska state) and Russia. In other terms it can also be said that this strait connects Asia to the America. It has been named after famous explorer Vitus Bering. At the narrowest point its width is 82 Km. On one side lies Cape Dezhnev, Russia while the other side lies cape Prince of Wales, Alaska, US. The international Date line passes through this states which makes either sides of the strait falling on different calendar dates.
+
+Bosporus strait
+
+http://www.quickgs.com/wp-content/uploads/2015/08/Bosporus-Dardanelles-Strait-300x191.jpg
+
+This strait connects Black sea to Marmara sea which in turn is connected to Aegean sea and then Mediterranean sea. In other words it can be also said that it provides a passage from Black sea to strategically most important European  Mediterranean sea. This strait partially separates Asia from Europe. It is also the world's narrowest navigable strait. It is 31 Km long and average 3.3 Km wide. At the narrowest point the width is 800 m which makes this narrowest strait of world. It has average depth of about 65 mt. It is also known as Istanbul Strait and lies completely inside Turkish territory.
+
+Strait of Dover
+
+http://www.quickgs.com/wp-content/uploads/2015/08/Strait-of-Dover-300x226.jpg
+
+This strait connects North Sea with English channel. Broadly speaking, it is the narrowest part of English channel which opens near the north sea. It separates Great Britain from France i.e. the mainland Europe. It is 33 Km wide and one can sea the opposite end with naked eye on a clear sunny day. On either sides lies Dover, county of England in north and Cape Gris Nez, Calais, France in south. Most of the swimmers who cross English channel use this strait for swimming across.
+
+Strait of Gibraltar
+
+http://www.quickgs.com/wp-content/uploads/2015/08/300x225xgibraltar-strait.jpg.pagespeed.ic.JRH3czD8Yz.webp
+
+This strait connects the Mediterranean sea with Atlantic ocean. This strait geographically separates Europe from Africa. One side of the strait the strait lies Spain (Europe Continent) and on the other part lies Morocco (African Continent). This strait was called as Pillars of Hercules by Ancient Greeks. This strait is under administrative control of British (British overseas territory). The narrowest width of this strait (distance between Africa and Europe) is just 14.3 Km. Its depth varies between 300 to 900 mt. This is a strategic location as most of the international Cargo ship containers passes from this strait.
+
+Strait of Malacca
+
+http://www.quickgs.com/wp-content/uploads/2015/08/Malacca-and-Sunda.jpg
+
+This strait separates Peninsular Malaysia from Sumatra island of Indonesia. This strait connects Pacific ocean at its south-east end to Indian ocean at its north-west end. It is about 800 Km long which runs from southern most point of Thailand up to the peninsular Malaysia in east part and Indonesian Sumatra in west. Its width is about 65 Km. It provides a shorter route for ships travelling from Indian Ocean (Andaman sea) to South China sea and saves thousands of kilometers and this is the reason why it is one of the busiest waterways.
+
+Strait of Tartary
+
+http://www.quickgs.com/wp-content/uploads/2015/08/599x369xTartary-strait.png.pagespeed.ic.741oQ8opiX.png
+
+Strait of Tartary is also called as Tartar or Tatar strait. This is located in East Asia (north Pacific ocean). This strait separates Sakhalin island from mainland Russia. This strait connects Okhotsk sea and sea of Japan.
+
+Plak strait
+
+Sunda strait
+
+Dardanelles strait
+
+Hormuz and Bab-el-Mandeb strait
+
+Interesting facts about straits of the world
+
+- Longest strait of world - Strait of Malacca which separates Malay peninsula from Sumatra island of Indonesia. It is 800 Km long.
+- Widest strait of world - Denmark strait (or Greenland strait) which separates Greenland from Iceland. It is 290 km wide at the narrowest point.
+- Narrowest strait of world - Bosphorus strait, at the narrowest point the width is 800 m.
+- Shallowest strait of world - Sunda strait, at the eastern part the depth decreases to about 20 mt making it very difficult for navigation.
+- Strait that separates Asia from America - Bering strait.
+- Strait that separates Australia from Tasmania - Bass strait
+- Strait that separates Europe from Africa - Gibraltar strait
+
+**List of straits of various continents**
+
+```{r world-straits}
+read_csv("./data/world_straits.csv") %>% 
+  knitr::kable(caption = "Major straits of the world.", longtable = TRUE, booktabs = TRUE) %>% 
+  kableExtra::kable_styling(latex_options = "striped") %>% 
+  kableExtra::column_spec(1:4, width = c("8em", "12em", "12em", "5em"))
+  
+```
+
+
+
+## Geographical and political division of Nepal
+
+- Himalayan region 15% of land with 16 districts
+- Hilly region 68% of land with 39 districts
+- Terai region 17%of land with 20 districts.
+- Land with the lowest altitude from sea level: Kechanakalan (Jhapa)
+- Nepal covers an area of 0.03% of the world and 0.3% of Asia
+- Largest district: Dolpa
+- Smallest district: Bhaktapur
+- Largest Lake of Nepal: Rara
+- Deepest lake of Nepal: Shey - Phoksundo (Y - Shaped lake)
+- The lake situated at highest altitude of the world: Tilicho (Manang)
+- The total agricultural land in terai: 53% of the total
+- Total national parks: 11
+- Biggest national park: Shey - Phoksundo N.P. (3555 sq.km)
+- Smallest national park: Rara N.P. (106 sq.km)
+- First national Park: Chitwan N.P (listed in world heritage site) established in 1973 AD
+- Last national park (recently established): Banke N.P.
+- Langtang N.P. famous for Red Panda and Chitwan N.P. famous for One horned rhino
+- Koshi Tappu Wildlife reserve famous for Wild buffalo (Arna)
+
+**Political division and basic information**
+
+- Total municipality in Nepal: 191
+- Metropolitian Municipality: 1 (Ktm)
+- Submetropolitian Municipality: 11
+- Total Village Development Committee (VDC) in Nepal: 3276
+- The districts without VDC: 2 (Kathmandu and Bhaktapur)
+- Population of Nepal according to census 2068 BS: 26494504
+- Male population 48.5% and female population 51.5%
+- Population density, census 2068 BS: 180 population/sq.km
+- Literacy rate, census 2068 BS: 65.9% (male: 75.1% and female: 57.4%)
+- 1st president of Nepal: Dr. Ram Baran Yadav
+- 1st Vice - President of Nepal: Parmananda Jha
+- Present Prime Minister of Nepal: Puspa Kamal Dahal (39th Prime Minister of Nepal)
+- Present Finance Minister of Nepal: Krishna Bahadur Mahara
+- Present Energy Minister of Nepal: Janardan Sharma
+- Present Health Minister of Nepal: Gagan Thapa
+- Present Education Minister of Nepal: Dhaniram Poudel
+- Present Forest Minister of Nepal àShankar Bhandari
+- Present Agriculture Minister of Nepal: Gauri Shankar Chaudhary
+- 1st Prime Minister of Nepal: Bhimsen Thapa
+- 1st Lady Minister of Nepal: Dwarika Devi Thakurani
+- 1st Census taken in Nepal: 1968 BS (1911 AD)
+- 1st five year plan started in Nepal (1956-1961 AD): 2013, Asoj 01
+- Districts linking both India and China: 2 (Darchula and Taplejung)
+- District of Baunna Pokhari Tripanna Tal: Rukum
+- Baglung district is known as district of Hanging bridges. It is the district with the boundary similar to map of Nepal.
+- District of Terai not linked with Mahendra Highway: Parsa
+- Famous district for production of Coffee: Gulmi
+- Famous district of Orange production: Dhankuta
+- Total budget allocated for Fiscal year 2072/73 BS: 8 Kharab 19 arab 64 crore and88 lakh.
+- Severe earthquake on 12th Baisakh 2072 BS at 11:36 am took more than 8850 people.
+- CEO of present Cricket Association Nepal: Bhawana Ghimire
+- Constitution Asembly - 2 election at 2070/08/04
+
+## Miscelleneous 
+
+Geographical Nicknames
+
+- Country of Midnight Sun: Norway
+- Country of White Elephant: Thailand
+- Country of Rising Sun: Japan
+- Country of Thousand Elephants: Laos
+- Country of Cakes: Scotland
+- Pearl of the east: Srilanka
+
+- Smallest continent: Australia
+- World's Highest Mountain: Mt Everest (Nepal 8848m)
+- Largest Ocean: Pacific Ocean
+- Largest Desert: Sahara Desert
+- Largest Country: Russia
+- Largest river: The Amazon
+- Highest Waterfall: Angel falls; Venezuala
+- Longest River: Nile river; Egypt
+- Deepest lake: Baikal Lake; Siberia, Russia
+- Smallest Country: Vatican City
+- Largest Island: Greenland
+- Largest Canal: Suez Canal
+
+- The first doctor to transplant heart: Christian Bernard
+- Number of land locked countries in the world: 34 (largest: Mangolia, Smallest: Vatican city)
+- The man made structure on Earth which can be seen from space: The Great Wall of China
+- The first country to provide the written constitution to its people: USA
+- Country which do not have its own coins: Paraguay
+- Country with no national anthem: Switzerland

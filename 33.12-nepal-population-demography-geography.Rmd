@@ -1,0 +1,52 @@
+## Population census, 2068
+
+```{r census-2068}
+dplyr::tribble(~"Indicator", ~"Unit", ~"Value", 
+               "Male", "count", 12849041,
+               "Female", "count", 13645463,
+               "Annual population growth rate", "percentage", 1.35,
+               "Population density", "individuals per msq", 180,
+               "Total engagement in agriculture", "percentage", 65.6,
+               "Male engagement in agriculture", "percentage", 60.2,
+               "Female engagement in agriculture", "percentage", 72.8, 
+               "Crude birth rate", "per thousand", 21.8,
+               "Crude death rate", "per thousand", 7.3,
+               "Child death rate", "per thousand", 40.5,
+               "Net fertility rate", "percentage", 2.5, 
+               "Average life expectancy", "years", 66.6) %>% 
+  knitr::kable(caption = "Population census, 2068 summary", booktabs = TRUE, longtable = T) %>% 
+  kableExtra::kable_styling(latex_options = "striped")
+
+```
+
+## Indigenous groups of Nepal
+
+The indigenous (Adibasi/janajati) groups in Nepal are defined as social groups with a social and cultural identity distinct from the dominant society. The National Foundation for Upliftment of Adivasi/Janjati Act (2002) defines those ethnic groups and communities who have their own mother language and traditional rites and customs, distinct cultural identity, distinct social structure and written or unwritten history. The Act has recognized 59 indigenous communities in Nepal. 
+
+These groups as a whole are generally considered to be the marginalized segment of the population who engage in economic activities ranging from hunting and gathering,and shifting agriculture in or near forests, to wage laborers or even small-scale market-oriented activities. However, _Adibasi_/ _janajati_ amongst themselves are diverse groups who do not all come under one economic system.
+
+There are disparities amongst different _Adivasi_/ _Janajati_ groups in Nepal. While Adivasi Janajati groups such as _Rautes_ are still engaged in hunting and collecting food, _Chepangsand_, _Kusundas_ practice slash and burn, shifting cultivation and depend mainly on natural resources. On the other hand, Newars, Thakalis and Gurungs are more exposed to modernity and are involved in foreign employment, government and non-government services, industry and commerce.
+
+Considering their diverse socioeconomic status, the Nepal Federation of Indigenous Nationalities (Adivasi Janajati) (NEFIN) 2004, an umbrella organization of Adivasi Janajati groups has classified _Adivasi_ _Janajati_ groups into five categories (\ref{tab:adivasi-janajati-classification}).  Of the total 59 Adivasi Janajati groups, 10 groups are categorized as "endangered", 12 groups as “highly marginalized", 20 groups as "marginalized", 15 groups as "disadvantaged" and 2 groups as "advanced" or better off on the basis of a composite index consisting of literacy, housing, land holdings, occupation, language, education, and population size.
+
+```{r adivasi-janajati-classification}
+tribble(
+  ~"region", ~"count", ~"endangered", ~"higly_marginalized", ~"marginalized", ~"disadvantaged", ~"advantaged",
+  "Mountain", 18, NA, "Shiyar, Shingsawa (lhomi), and Thudam", "Bote, Dolpo, Larke, Lhopa, Mugali, Tokpegola and Walung", "Bara gaule, Byansi (Sauka), Chhaairotan, Marphali thakali, Sherpa, Tangbe and Tingaunle thakali", "Thakali",
+  "Hills", 24, "Bankariya, Hayu, Kusbadiya, Kusunda, Lepcha, Surel", "Baramu, Thami (Thangmi), Chepang", "Bhujel, Dura, Pahari, Phree, Sunuwar, Tamang", "Chhantyal, Gurung (Tamu), Jirel, Limbu (Yakthumba), Magar, Rai, Yakkha, Hyolmo", "Newar",
+  "Inner terai", 7, "Raji, Raute", "Bote, Danuwar, Majhi", "Darai, Kumal", NA, NA,
+  "Terai", 10, "Kisan, Meche (Bodo)", "Dhanuk (Rajbansi), Jhangad, Santhal (Satar)", "Dhimal, Gangai, Rajbansi (Koch), Tajpuriya, Tharu", NA, NA
+) %>% 
+  rename_all(function(x)str_to_sentence(str_replace_all(x, "_", " "))) %>% 
+  knitr::kable(booktabs = TRUE, caption = "Classification of Adivasi/Janajatis in Nepal; Source: NEFIN, 2004") %>% 
+  kableExtra::kable_styling(latex_options = "striped", font_size = 8) %>% 
+  kableExtra::column_spec(column = 1:7, width = c("5em", "4em", rep("8em", 5)))
+  
+```
+
+
+## Hulaki rajmarga (Hulaki highway)
+
+http://www.karma99.com/
+http://www.karma99.com/2015/09/hulaki-rajmarga.html
+

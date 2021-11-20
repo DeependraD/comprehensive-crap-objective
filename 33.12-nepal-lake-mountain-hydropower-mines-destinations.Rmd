@@ -1,0 +1,182 @@
+## Hydroelectricity in Nepal
+
+Status of electricity production as of 2076/77 (Annual Report, NEA)
+
+```{r electricity-2076-77}
+tribble(
+  ~"Total of component", ~"Capacity",
+  "Major Hydro(NEA)-Grid Connected", 577394,
+  "Small Hydro(NEA)-Isolated", 4536,
+  "Hydro(NEA)", 581930,
+  "Hydro(IPP)", 696168.4,
+  "Hydro(Nepal)", 1278098,
+  "Thermal(NEA)", 53410,
+  "Solar(NEA)", 1350,
+  "Installed Capacity(NEA & IPP)-Grid", 1328322.4,
+  "Installed Capacity", 1332858
+  ) %>% 
+  knitr::kable(booktabs = TRUE, longtable = TRUE, caption = "Status of electricity production as of 2076/77; Source: Annual Report, NEA")
+```
+
+### Completed and operational projects
+
+```{r hydropower-completed}
+read_csv("./data/hydropower_operational_nea_book_2077.csv") %>% 
+  knitr::kable(booktabs = TRUE, longtable = TRUE) %>% 
+  kableExtra::kable_styling(latex_options = "striped", font_size = 8) %>% 
+  kableExtra::column_spec(column = 1:6, width = c("3em", "16em", "10em", "5em", "5em", "6em"))
+```
+
+### Upcoming projects
+
+```{r hydropower-upcoming}
+read_csv("./data/hydropower_different_stages_nea_book_2077.csv", skip = 1) %>% 
+  knitr::kable(booktabs = TRUE, longtable = TRUE) %>% 
+  kableExtra::kable_styling(font_size = 8, latex_options = "striped") %>% 
+  kableExtra::column_spec(column = 1:7, width = c("3em", "12em", "8em", "5em", "6em", "5em", "6em"))
+  
+read_csv("./data/hydropower_planned_and_proposed_projects_nea_book_2076-77.csv") %>% 
+  knitr::kable(booktabs = TRUE, longtable = TRUE) %>% 
+  kableExtra::kable_styling(font_size = 8, latex_options = "striped") %>% 
+  kableExtra::column_spec(column = 2, width = "16em")
+# read_csv("./data/nepal_hydroelectricity_projects_upcomming.csv", skip = 2) # nea report 2073
+```
+
+## Mountains of Nepal
+
+```{r nepal-peaks}
+# reconcile these two data
+readxl::read_xlsx("./data/nepal_mountains.xlsx") %>% 
+  knitr::kable(booktabs = TRUE, caption = "Mountain peaks of Nepal", longtable = TRUE) %>% 
+  kableExtra::kable_styling(font_size = 8, latex_options = "striped")
+
+read_csv("./data/nepal_mountains.csv") %>% 
+  knitr::kable(booktabs = TRUE, caption = "Top 20 peaks, along with their location and heights of Nepal", longtable = TRUE) %>% 
+  kableExtra::kable_styling(font_size = 8, latex_options = "striped")
+```
+
+## Rivers of Nepal
+
+The Koshi River system is the largest and originated from the top four Himalayan peaks (Mt. Everest-8,850 m, Mt. Jannu-7,710 m, Mt. Makalu-8,462 m and Mt. Cho Oyu-8,201 m). The Koshi is also called Sapta Koshi for its seven Himalayan tributaries in eastern Nepal: Indrawati, Sun Koshi, Tama Koshi, Dudh Koshi, Liku, Arun, and Tamor. The Arun rises in Tibet some 150 km beyond Nepal's northern border. A tributary of the Sun Koshi, Bhote Koshi also originated in Tibet and is followed by the Arniko Highway connecting Kathmandu (Nepal) and Lhasa (Tibet-China)
+
+The Gandaki/Narayani river system originated from Mt. Annapurna (8,091 m) and Mt. Manashu (8,163 m). The Gandaki/Narayani has seven Himalayan tributaries in the middle of Nepal: Daraudi, Seti Gandaki, Madi, Kali, Marsyandi, Budhi, and Trisuli. This is why the Gandaki/Narayani river system also called Sapta Gandaki. The river Kali-Gandaki rises on the edge of the Tibetan Plateau and flows through the semi-independent Kingdom of Mustang, then between the 8,000 m Dhaulagiri and Annapurna ranges in the world's deepest valley. The Trisuli rises north of the international border inside Tibet. After the seven upper tributaries join, the river becomes the Narayani inside Nepal and is joined by the (East) Rapti from Chitwan Valley. After crossing into India, its name has been changed to Gandaki and finally joins the Ganges River system.
+
+The Karnali/Ghaghara originated from two mountain peaks: Api (7,132 m) and Kanjiroba (6,883 m). The Karnali drains western Nepal, with the Bheri and Seti as major tributaries. The upper Bheri drains Dolpo, a remote valley beyond the Dhaulagiri Himalaya. The upper Karnali rises inside Tibet near Lake Manasarovar and Mount Kailash. The area around these features is the hydrographic nexus of South Asia since it holds the sources of the Indus and its major tributary the Sutlej, the Karnali-a Ganges tributary and the Yarlung Tsangpo/Brahmaputra. The Mahakali or Kali along the Nepal-India border on the west joins the Karnali in India, where the river is known as Ghaghara.
+
+All three major river systems possess multiple tributaries rising in or around the high Himalaya maintaining substantial water flows during summer and spring. These rivers finally discharge water into the Ganges River system to the Bay of Bengal (Indian Ocean). The tributaries of these river systems cross the highest mountains in deep gorges, flow south through the Middle Hills, then join in candelabra-like configuration before crossing the Mahabharat Range and emerging onto the plains with over 10,000 km 2 area. All Nepalese rivers have strong water flow however these river systems do not support any significant commercial navigation due to deep gorges creating obstacles.
+
+```{r rivers-nepal-basin-system}
+read_csv("./data/rivers_of_nepal_basin_system.csv", skip = 3) %>% 
+  knitr::kable(booktabs = TRUE, caption = "Major river system and their tributaries of Nepal", longtable = TRUE) %>% 
+  kableExtra::kable_styling(font_size = 8, latex_options = "striped") %>% 
+  kableExtra::collapse_rows(columns = 1) %>% 
+  kableExtra::column_spec(column = 1:5, width = c("8em", "8em", rep("6em", 3)))
+```
+
+## Lakes of Nepal
+
+```{r lakes-of-nepal}
+
+lakes_nepal <- read_csv("./data/districtwise_lakes_of_nepal.csv")
+
+lakes_nepal_split <- lakes_nepal %>% 
+  mutate(groups = cut(row_number(), breaks = 2), 
+         groups = as.numeric(groups)) %>% 
+  group_split(groups) %>% 
+  map(~.x %>% select(-groups))
+
+max_rows <- max(map_dbl(lakes_nepal_split, nrow))
+equalizing_mask <- map_dbl(lakes_nepal_split, nrow) != max_rows
+
+lakes_nepal_split[equalizing_mask] <- lakes_nepal_split[equalizing_mask] %>% 
+  map(~add_row(.x, tibble("district" = rep(NA, max_rows-nrow(.x)), 
+                          "lake_and_remark" = rep(NA, max_rows-nrow(.x)))))
+
+lakes_nepal_split <- lakes_nepal_split %>% 
+  bind_cols()
+
+lakes_nepal_split %>% 
+  knitr::kable(booktabs = TRUE, caption = "Lakes of Nepal shown districtwise", longtable = TRUE, col.names = rep(c("District", "Lake"), time = 2)) %>% 
+  kableExtra::kable_styling(latex_options = "striped", font_size = 8) %>% 
+  kableExtra::collapse_rows(1) %>% 
+  kableExtra::column_spec(column = 1:4, width = c("5em", "12em", "5em", "12em")) %>% 
+  kableExtra::footnote(general = "Source: \\url{https://en.wikipedia.org/wiki/List_of_lakes_of_Nepal}", escape = TRUE)
+```
+
+
+## Landmarks
+
+```{r landmarks-nepal}
+read_csv("./data/nepal_landmarks.csv") %>% 
+  rename_all(function(x)str_to_sentence(x)) %>% 
+  knitr::kable(booktabs = TRUE, longtable = TRUE, caption = "Major landmarks of Nepal") %>% 
+  kableExtra::kable_styling(latex_options = "striped", font_size = 8) %>% 
+  kableExtra::column_spec(column = 1:5, width = c("3em", "5em", "5em", "6em", "18em"))
+```
+
+## Mineral resources
+
+Nepal lies in the central part of 2500km long Himalayan belt. Although, underdeveloped and landlocked, the geography, in some way has conditioned it's richness in vast natural resources such as minerals, water, forest, medicinal herbs and varieties of agricultural products. 
+
+The mountainous region and the geological environment therein are suitable for metallic, nonmetallic and energy/ fuel mineral deposits as well as huge amount of construction materials, dimension and decorative stones. 
+
+Systematic geological mapping, mineral exploration and detail investigation of mineral were started since the establishment of Nepal Bureau of Mines in 1961 (2018 BS) and Nepal Geological Survey in 1967 (2024 BS). Both of them were amalgamated by the Government of Nepal (GON) in 1977 and renamed it as Department of Mines and Geology (DMG). Mineral exploration activities were in peak during 1969 - 1984 when DMG and UNDP funded projects (1969 - 1972), Mineral Exploration Development Project (MEDP, 1974 - 1978) and follow up works by DMG were in action. All these investigation/ exploration activities in the past were able to delineate quite a few prospective areas and also able to identify some economic and sub-economic mineral deposits in different parts of the country. Systematic petroleum exploration by DMG was started in 1979. First Airborne Magnetic survey over 48000 square km area covering Terai and Siwalik belts was conducted with the help of IDA/ World Bank.
+
+Since last few years just over 550 private investors have shown their interest and involve in mineral exploration and mining activities. In FY 2075/076BS (2019) they obtained 388 prospecting licenses to explore 16 minerals and 143 mining licenses to mine 17 mineral commodities from DMG.
+
+Most of the mines are in development stage with very slow progress and only some limestone and few dolomite, talc, calcite, marble, granite, quartzite, slate, coal, red clay, and semi-precious stones mines are in operation whereas magnesite, lead, zinc, copper and iron ore mines are still unproductive.
+
+Mineral resources and petroleum play vital role in the industrial development and it could contribute substantially (>15%) in the national GDP.
+
+A gun factory based on Thoshe iron deposit was established in 1921 at Thoshe Megchan in Ramechhap. But after the change in the government in 1951 such mining activities were gradually closed because of change in the policy of new government, unavailability of charcoal for smelting, technical difficulties in mining at depth etc.
+
+Geologically Nepal Himalaya can be simply divided into five distinct morpho-geotectonic zones separated by four prominent linear structures like (from south to north),
+- Main Frontal Thrust (MFT),
+- Main Boundary Thrust (MBT),
+- Main Central Thrust (MCT) and
+-South Tibetan Detachment System (STDS).
+
+From mineral resources point of view, the southernmost Terai Plain (northern fringe of Indo Gangetic plain) area is potential for gravel, sand, ground water, and underlying Siwalik and Pre-Siwalik rocks below the Quaternary sediments at depth consists of stratigraphic and structural traps suitable for petroleum and natural gas reserves. The Sub Himalaya (Siwalik Foothills/ Churia Range including Dune Valleys) is the potential area for construction materials, radioactive minerals, minor amount of low grade coal seams, and possible reservoir rocks and structural traps for petroleum, natural gas. Similarly, the Lesser Himalaya (Mahabharat Range including Midland/ Valleys) is promising for metallic minerals mainly iron, copper, lead, zinc, cobalt, nickel, tin, tungsten, molybdenum, gold, uranium rare metals and so on; and industrial minerals like magnesite, limestone, dolomite, talc, phosphorite, bauxite, clay, kaolin, graphite, mica, quartz, silica sand and gemstones; fuel minerals such as coal, lignite, peat, methane gas, petroleum and natural gas; hot springs; radioactive minerals; and voluminous construction materials; crushed gravel as well as river boulders, gravel and sand etc. Some of the areas in Higher Himalaya are quite promising for precious and semiprecious stones, marble and metallic minerals like lead, zinc, uranium, gold, silver etc. Towards far north the Tibetan Tethys Zone (Inner Himalaya) is prospective for limestone, dolomite, gypsum, salt (brine water), radioactive minerals and natural gas.
+
+- Mines and Mineral Act, 2042 BS (amended in 2050 BS)
+- Mines and Mineral Regulation 2056 BS with amendments in 2060, 2072 & 2073 BS
+- Nepal Petroleum Act 2040 BS (1983)
+- Petroleum Regulation 2041 BS (1985) with amendments in 1985, 1989, 1994 and 2018
+
+Under these existing Rules and Regulations DMG issue both Prospecting and Mining Licenses and sign petroleum agreements with the interested national and international investors/ companies and regularly inspects and monitors the prospecting and mining activities carried out by the lease holders. DMG had issued about 121 and 142 mining licenses for 16 and 18 mineral commodities and about 365 and 388 prospecting licenses in FY 2074/75BS and 2075/76BS respectively.
+
+There are over 48 limestone quarries/ mines from which limestone are supplied to different cement industries. 7 gemstone (tourmaline, kyanite, quartz crystals), 1 iron, and few talc, coal, marble, red clay, calcite, quartzite, dolomite mines are in production. Few gem industries which do only cutting and polishing of semiprecious and precious stones from Nepal and abroad are established. Most of the minors they sold their raw materials to different industries. Construction aggregates, sand, gravel, dimension stone, decorative stones, paving stones and roofing slates are the other important mineral resources which have high demand for infrastructural development works are locally mined. Metallic ore minerals of iron, copper, lead, zinc, cobalt, nickel, tin, tungsten, molybdenum, and placer/ primary gold are also known from different parts of Nepal but they are not yet mined systematically. Previously two placer gold mining license were issued to private sector but they did not show any production for long time and closed. 
+
+Recently, DMG is in the process to mine Dhauwadi - Pokhari hematite deposit in Nawalparasi. DMG has already proved 310 million m3 methane gas reserve in Kathmandu valley which can be utilized for house hold use to replace imported propane gas. Major and important mineral prospects are briefly described below.
+
+```{r mineral-nepal}
+tribble(
+  ~"element", ~"ore", ~"location", ~"remark",
+  "Iron", "Magnetite (Fe3O4), Hematite (Fe2O3), Limonite/goethite (FeO(OH).nH2O), Siderite (FeCO3)", "Phulchoki (Lalitpur), Thoshe (Ramechhap), Labdi Khola (Tanahun), Jirbang (Chitwan), Dhauwadi - Pokhari (Nawalparasi), Falamkhani/ Dhuwakot (Parbat), Bhedikhor and Lukarban (Baglung), Purchaundi/ Lamunigad (Bitadi), Dahabagar, Kachali, and Ekghar/ Khanigaon (Bajhang)", "Phulchoki iron deposit still remained untransformed into commercialization due to its location in the environmentally sensitive area and also shortage of power like electricity and unavailability of good quality coal in Nepal. For Thoshe iron deposit, DMG did the assessment of this prospect and calculated geological reserve of about 10.5 million ton iron ore. DMG issued 7 prospecting and 4 mining licenses to the private/ public companies in FY 2018.",
+  "Copper (Cu)", "Chalcopyrite (CuFeS2), Malachite (CuCO3(OH)2), Azurite (Cu3(CO3)2(OH), Covellite (CuS), Cuprite (Cu2O), Bornite (Cu5FeS4), Chalcocite (Cu2S)", "Small scale mines were operational in Gyazi (Gorkha), Okharbot (Myagdi) and Wapsa (Solukhumbu) till 1995. Prospective deposits occur in Kalitar (Makwanpur), Dhusa (Dhadhing), Wapsa (Solukhumbu), Bamangaon (Dadeldhura), Bhut Khola (Tanahun), Khandeshori/Danfechuli/Marma (Darchula), Pandav Khani (Baglung), Baise Khani (Myagdi), Ningre (Myagdi), Mul Khani (Gulmi), Sikpashore (Dolakha), Kurule (Udayapur), Chhirling Khola (Bhojpur), Janter Khani (Okhaldhunga), Siddhi Khani (Ilam)", "1 mining license and 7 prospecting licenses for copper have been issued by DMG", 
+  "Zinc and Lead (Pb)", "Sphalerite (ZnS) and Galena (PbS)", "Ganesh Himal area (Rasuwa), Phakuwa (Sankhuwasabha), Labang- Khairang (Makwanpur), Pangum (Solukhumbu), Salimar valley (Mugu/ Humla), Daha Gulzar and Rani Shikhar (Darchula), Phulchoki (Lalitpur), Hatti Lekh (Palpa), Sisha Khani and Kandebas (Baglung), Dhuwakot (Parbat), Barghare (Makwanpur), Khola Khani (Taplejung)", "Lari deposit (Ganesh Himal) is an economic deposit of about 2 million metric tonne ore with combined grade 13% Zn+Pb with minor Ag and Cd. DMG issued 1 zinc and 3 lead mining license and 1 zinc and 2 lead prospecting license in 2018.", 
+  "Cobalt (Co)", "Cobaltite (COAsS), Erythrite (CO3(AsO4)2.8H2O", "Netadarling and Tamghas (Gulmi), Samarbhamar (Arghakhanchi), Lamadanda (Dhadhing), Nangre (Kavre), Bhorle (Ramechhap), Bauli-Gad (Bajhang).", "It is mostly used to make battery for electric vehicles and pigment to produce blue glass and in polishing diamond. Both Co and Ni are harmful to health to develop cancer, chronic bronchitis etc.",
+  "Nickel (Ni)", "Niccolite (NiAs), Pentlandite (Fe,Ni)9S8 mainly associated with chalcopyrite, pyrrhotite and pyrite", "Bamangaon (Dadeldhura), Bering Khola/Sunmai (Ilam), Bauligad (Bajhang), Khopre Khani (Sindhuli), Nangre (Kavre), Bhorle (Ramechhap), Ningre (Kavre)", "Nickel and chromite both are used in chrome steel and other alloys to withstand high temperature and corrosion.",
+  "Gold (Au)", "Generally found in association with silver and many other sulphide ores (Chalcopyrite, Arsenopyrite, Pyrite) mainly in hydrothermal quartz veins, quartz sulphide veins and in auriferous quartzite", "Alluvial/ placer gold are frequently wined by local dwellers (Botes) from the river gravel/ sediments deposited by the major rivers like Mahakali, Chamliya, Jamari Gad, West Seti, Karnali, Bheri, Rapti, Lungri Khola, Phagum Khola, Kaligandaki, Myagdi Khola, Modi, Madi, Marshyangdi, Trishuli, Budhigandaki, and Sunkoshi Rivers along their high and low flood plains as well as in their terraces. Placer gold in these rivers are mainly derived from higher Himalayan region. Primary gold in-situ occurrences are known from Lungri Khola area, Damphutar, Dokadhunge, Phuliban, Sherma, and Gam (Rolpa); Bangabagar, Gorang and Jamari Gad (Baitadi); Bamangaon (Dadeldhura), Khandeshori (Darchula), Upper part of Bauligad (Bajhang) and rarely in Bering Khola - Sunmai area (Ilam).", "2 mining licenses and over 30 prospecting licenses for placer gold exploration have been issued by DMG in FY2012/13.",
+  "Silver (Ag)", "Generally associated with gold, cobalt and zinc-lead ore", "In Zinc + lead ore of Ganesh Himal (Rasuwa), Barghare (Makwanpur) and polymetal sulphide of Bering Khola - Sunmai area (Ilam), in association with cobalt ore in Netadarling (Arghakhanchi) and Samarbhamar (Gulmi)", NA,
+  "Tin (Sn)", "Vicinity of granitic rocks especially at the contact zone in the gresinized part and in pegmatites. Cassiterite (SnO2) is the main ore.", "Meddi and Ganera in Dadeldhura, and Mandu Khola area in Makwanpur", NA,
+  "Tungsten (W)", "Scheelite (CaWO4) and wolframite (Fe,Mn)WO4)", "Bamangaon polymetallic deposit and few minor occurrences in other places of Dadeldhura and Makwanpur.", NA,
+  "Molybdenum (Mo)", "Molybdenite (MoS2), Wulfenite (PbMoO4).", "Khari Khola (Solukhumbu), Bamangaon (Dadeldhura), Bauli Gad (Bajhang), Lungri Khola (Rolpa), Samarbhamar (Arghakhanchi), Chau Khola (Makwanpur)", "It occurs mainly in quartz veinlets in granites/ pegmatites with fluorite and topaz and also associated with scheelite",
+  "Chromium (Cr)", "Chromite (FeCr2O4); It is mainly associated with ultrabasic and basic rocks like norite/ gabbro", NA, "Chromite occurrences are very rare since large basic/ ultrabasic rock bodies (source rock) are not available in Nepal",
+  "Titanium (Ti)", "Ilmenite (FeTiO3) and Rutile (TiO2)", "In association with magnetite/ hematite ore at Thoshe (Ramechhap) and Bauligad (Bajhang)", NA,
+  "Uranium (U) and Thorium (Th)", "Ore of uranium like Autunite (Ca(UO2)2(PO4)2.10H2O) are recorded in pegmatites; Uranitite (UO2), pitchblende (U3O8), and complex ores like torbernite, tyuyamunite, carnotite and cofinite", "Thumki, Jagat, Panchmane, Gagalphedi and Chunikhel in Shivapuri area in Kathmandu, Upper Mustang, Tinbhangale, Chandi Khola and Chiruwa Khola (Makwanpur); Buka Khola (Sindhuli); Mardar Khola and Panpa Khola (Chitwan)", "Small amounts of Pb, Ra, Th, Y, N, He and Ar are also present in uranium ore. Pb/ U and He/ U ratios are used to determine the age of the rocks. Uranium is the source of radium and it emits Alpha, Beta and Gamma particles/ rays.",
+  "Mercury (Hg)", "Cinnabar (HgS) is the chief ore", "Tirche Pani/Taruka; Khimti River", NA,
+  "Lithium (Li)", "Lepidolite appears is the chief sources of lithium. Petalite (Li(AlSi4O10)) and spodumene (LiAl(Si2O6)) are the two main ores of lithium.", "Hyakule and Phakuwa (Sankhuwasabha)", NA,
+  "Titanium (Ti)", "Sphene (CaTiO(SiO4)", "Common accessory mineral in granite, granodiorite, diorite, and nepheline syenite and generally associated with iron ores, zircon, and apatite", NA,
+  "Limestone", NA, "Nigale (Dhankuta); Sindhali, Galtar, Chuladhunga and Gyampathumka (Udaypur); Bhainse, Okhare, Majuwa, Nibuwatar, Sukaura/ Budichaur (Makwanpur); Jogimara, & Beldada (Dhadhing); Kakaru Khola, Shikharpur (Sindhuli); Chovar (Kathmandu); Bhattedanda (Lalitpur); Lamatar, Balthali, Rosi, Nogure and Nandu (Kavre); Waling (Syangja); Jyamire, Koldanda, Masyam, Kerabari, Sisne/ Dobhan, Argali, (Palpa); Narapani and Supa Khola (Arghakhanchi; Gandari, Sewar Khola, Arung Khola, (Dang); Salendanda, & Neupane (Pyuthan); Kajeri, Sarada Khola, Kutichaur (Salyan); Bibang Khola and Rupla Khola (Rolpa); Chaukune and Lakharpata (Surkhet), Diyarigad, Bhumeshor, Chauraha, (Baitadi) and few other places in Lalitpur, Kavre, Khotag, Udayapur, Syangja, Palpa, Arghakhanchi, Dang, Pyuthan, Sallyan, Rolpa, Rukum, Bajura, Bajhang, Baitadi and Darchula", "The quality of limestone depends on its chemical composition like CaO%, MgO%, SiO2%, Al2O3%, Fe2O% LOI%. Used to manufacture Portland cement, lime, agrilime, flux for iron and steel industries, agriculture, feed in poultry farm, leather industries etc. DMG issued 58 mining licenses and 178 prospecting licenses for limestone to private sectors. Annual production of limestone in 2018 was 6,621,614.96 mt.", 
+  "Dolomite", NA, "5 billion tons (possible) of dolomite occur mainly in Mahabharat range in Dhankuta, Khotang, Udayapur, Sindhuli, Dolakha, Kavre, Kathmandu, Makwanpur, Dhadhing, Syangja, Palpa, Baglung, Gulmi, Arghakhanchi, Dang, Pyuthan, Sallyan, Rolpa, Rukum, Jajarkot, Surkhet, Dailekh, Jumla, Achham, Doti, Bajhang, Bajura, Baitadi and Darchula", "The quality of dolomite depends on its chemical composition like MgO%, CaO%, SiO2%, Al2O3%, Fe2O%, LOI%. Dolomite is a potential source of metallic magnesium. Chemicals like MgO, Mg(OH), MgCO3, and MgSO4 can be obtained from dolomite.",
+  "Magnesite (MgCO3)", NA, "Kharidhunga (Dolakha), Kampughat (Udayapur), Palpa, Baitadi and Dolakha", "Mainly used in the production of DBM from which high temperature furnace lining bricks are produced that can bear high temperature up to 2100oC in the furnace. Raw material for Dead Burnt Magnesite (DBM) plant located in Lamosanghu, Sindhupalanchok.",
+  "Talc (Mg3(Si4O10)(OH)2)", "In association with magnesite, dolomite and chloritic talc schist","Dolakha, Sindhupalchok, Dhadhing, Chitwan, Tanahun, Kaski, Syangja, Baglung, Surkhet, Bajhang, Bajura, Baitadi, Darchula", "DMG has issued 18 prospecting and 14 mining license. Kharidhunga talc mine is operating by Nepal Orind Magnesite since more than 2 decade. Its annual production is 8557.19 mt in 2018.",
+  "Mica", "Mostly Muscovite, Biotite, and few lepidolite and Phlogopite", "Langtang (Rasuwa), Bhumidanda and Kharanetar (Nuwakot), Chaukibhanjyang (Kathmandu), Nibuwagaon (Sindhupalchok), Lekhpatan, Fulbari and Tikachaur (Jajarkot), Khaptad (Bajhang), Baskot, Balaita, and Bhasukan (Doti), Fikal (Ilam), Chilingdin (Panchthar), Rangmale, Akabu/ Sainsabu, Dobal Pokhari, and Khanigaon (Taplejung), Phakuwa and Hyakule (Sankhuwasabha) and at few places in Gorkha and Dhadhing", "1 prospecting license for mica was issued by DMG in 2018. Mica is chiefly used as nonconductor of heat and electrical insulating material in electrical equipment/ apparatus, fire proofing material."
+  ) %>% 
+  knitr::kable(booktabs = TRUE, caption = "Mines (minerals and non-minerals) of Nepal and some remarks on those.", longtable = TRUE, escape = TRUE) %>% 
+  kableExtra::kable_styling(font_size = 8, latex_options = "striped") %>% 
+  kableExtra::landscape(margin = "1.25cm") %>% 
+  kableExtra::column_spec(column = 1:4, width = c("5em", "12em", "22em", "22em"))
+```
+
