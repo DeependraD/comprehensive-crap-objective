@@ -76,7 +76,7 @@ read_csv("./data/sports_number_of_players.csv") %>%
 ```{r sporting-terminologies}
 read_csv("./data/sports_terms.csv") %>% 
   knitr::kable(caption = "A glossary of sporting terms used worldwide.", booktabs = TRUE, longtable = TRUE) %>% 
-  kableExtra::kable_styling(latex_options = "striped", longtable = TRUE) %>% 
+  kableExtra::kable_styling(latex_options = "striped") %>% 
   kableExtra::column_spec(column = 1:2, width = c("18em", "8em"))
 ```
 
