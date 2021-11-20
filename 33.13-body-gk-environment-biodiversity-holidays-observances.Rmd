@@ -4,9 +4,11 @@
 
 **Protected areas: National park, wildlife reserve and buffer zone**
 
-```{r}
+```{r national-parks-protected-areas}
 read_csv("./data/nepal_protected_areas.csv", skip_empty_rows = TRUE) %>% 
-  knitr::kable(booktabs = TRUE, caption = "List of protected areas with general information")
+  knitr::kable(booktabs = TRUE, caption = "List of protected areas with general information", longtable = TRUE) %>%
+  kableExtra::kable_styling(latex_options = "striped", font_size = 8) %>% 
+  kableExtra::column_spec(column = 1:5, width = c("6em", "5em", "5em", "5em", "18em"))
 ```
 
 ## Days, year, decades and national and international observances

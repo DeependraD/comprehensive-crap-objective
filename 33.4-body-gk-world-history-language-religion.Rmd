@@ -6,7 +6,8 @@
 
 ```{r bronze-age}
 readxl::read_xlsx("./data/bronze_age_civilization.xlsx", skip = 1) %>% 
-  knitr::kable(caption = "A summary of eras representing Bronze age civilization", booktabs = TRUE)
+  knitr::kable(caption = "A summary of eras representing Bronze age civilization", booktabs = TRUE, longtable = TRUE) %>% 
+  kableExtra::kable_styling(latex_options = "striped")
 ```
 
 **Mesopotamian civilization**: The oldest civilization of the world mesopotamia means 'land between the rivers'. Mesopotamia is the land between the Tigris and Euphrates rivers. Mesopotamia comprises four regions: Sumer (Southernmost region), Babylonia and Akkad (Middle region) and Assyria (Northernmost region).
@@ -260,7 +261,7 @@ read_csv('./data/world_war_first_1914-22_timeline.csv') %>%
   mutate(Events = str_remove_all(Events, pattern = "\\[\\d*\\]")) %>%
   knitr::kable(caption = "A timeline of major events of the World War I", longtable = TRUE, booktabs = TRUE) %>% 
   kableExtra::kable_styling(latex_options = c("hold_position", "striped")) %>% 
-  kableExtra::column_spec(column = 3, width = "22em")
+  kableExtra::column_spec(column = 2:3, width = c("10em", "26em"))
 
 ```
 
@@ -309,7 +310,7 @@ Emergence
 
 At the start of World War II, six great powers existed in the world: Great Britain, France, Germany, the Soviet Union, Japan, and the United States. By the end of the war, none but the United States retained the kind of economic and military might that qualifi ed it as an undisputed global power. That status was reinforced by the fact the only the United States possessed-and had used-atomic weapons. America also had enormous manufacturing capacity, vast domestic and foreign oil reserves, and had endured none of the devastation of its homeland that the other countries had. The US-sponsored Marshall Plan for the reconstruction of Western Europe, and the subsequent US-led North American Treaty Organization (NATO), meant that key centers of political and economic growth and development were aligned with the United States against the Soviet Union and its Eastern Bloc of communist states. Japan, too, operated as a US client state during the postwar period and after. 
 
-The Soviet Union, despite having been hard hit by the war, entered the postwar period with signifi cant territorial claims and prestige as a result of the role it had played in defeating Nazi Germany. It quickly imposed an "iron curtain," as Churchill (and some before him) memorably phrased it, around the areas it controlled in Central and Eastern Europe, namely, Poland, East Germany, Czechoslovakia, Hungary, Romania, and Bulgaria. (Yugoslavia became communist but kept its distance from Moscow; Albania, also communist, was aligned with the USSR.) Although these states were not comparable in their military-industrial potential to those in the west, the Soviets and their protégés made the most of what they had and sought to challenge Western claims to dominance, at least. The fact that movements inside countries such as Greece, Italy, China, Vietnam, and France were inspired by communist models of progress helped lend weight to the Soviet experiment. The Chinese Revolution of 1949, in particular, threw many Western observers for a loop. (Accusations over the "loss" of China remained a political staple for decades.) Inside the Soviet Union, technological advances came quickly enough to permit the testing of an atomic bomb in 1949. The arms race quickly advanced to the next level: development of a "super" bomb based on nuclear fusion and featuring greatly increased explosive power. The United States obtained such a weapon by 1952, and the Soviet Union by 1955.
+The Soviet Union, despite having been hard hit by the war, entered the postwar period with significant territorial claims and prestige as a result of the role it had played in defeating Nazi Germany. It quickly imposed an "iron curtain," as Churchill (and some before him) memorably phrased it, around the areas it controlled in Central and Eastern Europe, namely, Poland, East Germany, Czechoslovakia, Hungary, Romania, and Bulgaria. (Yugoslavia became communist but kept its distance from Moscow; Albania, also communist, was aligned with the USSR.) Although these states were not comparable in their military-industrial potential to those in the west, the Soviets and their protégés made the most of what they had and sought to challenge Western claims to dominance, at least. The fact that movements inside countries such as Greece, Italy, China, Vietnam, and France were inspired by communist models of progress helped lend weight to the Soviet experiment. The Chinese Revolution of 1949, in particular, threw many Western observers for a loop. (Accusations over the "loss" of China remained a political staple for decades.) Inside the Soviet Union, technological advances came quickly enough to permit the testing of an atomic bomb in 1949. The arms race quickly advanced to the next level: development of a "super" bomb based on nuclear fusion and featuring greatly increased explosive power. The United States obtained such a weapon by 1952, and the Soviet Union by 1955.
 
 Thus, through a combination of jostling for power in an unsettled postwar environment and seeking superiority in arms, US and Soviet leaders unleashed on the world the decades-long struggle known as the Cold War. Almost from the start, American offi cials came to rely on a policy of containment, meaning resistance on every front to the apparent expansionist goals of the Soviet Union. For their part, Soviet officials often found themselves constrained by the need to support or fight battles they would not have chosen on their own. For every communist uprising abroad there arose the need to provide backing for it and, therefore, to adjust Soviet strategy accordingly. The same type of constraining action also impacted US policymakers as the Korean and Vietnam wars, with all their pitfalls, gave clear witness. Sadly, too, the Cold War gave Communist leaders the means to justify their repressive internal policies by arguing that those policies were a necessary response in the face of a dangerous external enemy. A similar kind of ideological narrowing occurred in the United States, particularly in the immediate postwar years when the House Un-American Activities Committee (HUAC) and Senator Joseph McCarthy succeeded in whipping up a great Red Scare, or anti-communist frenzy, across the nation. Many lives were ruined as a result.
 
@@ -337,12 +338,11 @@ Source: Michael Shally-Jensen, PhD (Editor's introduction, The Cold War)
 
 
 ```{r world-language}
-
 read_csv('./data/world_top_spoken_languages.csv') %>% 
   mutate_all(list(~str_remove_all(., pattern = "\\[\\d*\\]"))) %>%
   knitr::kable(caption = "A list of top 20 spoken languages worldwide", longtable = TRUE, booktabs = TRUE) %>% 
   kableExtra::kable_styling(latex_options = "striped") %>% 
-  kableExtra::column_spec(column = 1:5, width = c("4em", "6em", "5em", "8em", "12em"))
+  kableExtra::column_spec(column = 1:5, width = c("1.5em", "6em", "5em", "8em", "12em"))
 ```
 
 Source: Ethnologue (2019, 22nd edition)
@@ -391,8 +391,8 @@ read_csv("./data/world_highest_military_decorations_countrywise.csv") %>%
   mutate_all(list(~str_remove_all(., pattern = "\\[\\d*\\]"))) %>%
   knitr::kable(caption = "Highest military decorations of different countries and their brief history", 
                longtable = TRUE, booktabs = TRUE) %>% 
-  kableExtra::kable_styling(latex_options = "striped") %>% 
-  kableExtra::column_spec(column = 1:5, width = c("4em", "6em", "5em", "5em", "6em"))
+  kableExtra::kable_styling(latex_options = "striped", font_size = 8) %>% 
+  kableExtra::column_spec(column = 1:5, width = c("4em", "6em", "5em", "5em", "12em"))
 ```
 
 

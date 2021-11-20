@@ -261,7 +261,7 @@
 read_csv("./data/saarc_countries_general_information.csv", skip = 1) %>%
   rename_all(function(x)str_replace_all(x, "_", " ")) %>% 
   knitr::kable(booktabs = TRUE, caption = "General information about SAARC countries", longtable = TRUE) %>% 
-  kableExtra::kable_styling(latex_options = "striped") %>% 
+  kableExtra::kable_styling(latex_options = "striped", font_size = 8) %>% 
   kableExtra::column_spec(column = 1:19, width = c(rep("4em", 2), rep("6em", 3), "4em", "8em", rep("4em", 2), "10em", rep("5em", 8), "24em"))
 ```
 
@@ -280,7 +280,8 @@ saarc_nepal_diplomatic_relations %>%
   mutate(
     `Date of diplomatic relation initiation` = readr::parse_date(`Date of diplomatic relation initiation`, format = "%B %d, %Y")
   ) %>% 
-  knitr::kable(booktabs = TRUE, caption = "Date of establishment of diplomatic relations of Nepal with SAARC countries")
+  knitr::kable(booktabs = TRUE, caption = "Date of establishment of diplomatic relations of Nepal with SAARC countries") %>% 
+  kableExtra::kable_styling(font_size = 8)
 ```
 
 
@@ -343,7 +344,7 @@ tribble(
   "The Prize in Economic Sciences", "Michael Kremer", "For their experimental approach to alleviating global poverty"
 ) %>% 
   knitr::kable(booktabs = TRUE, caption = "Nobel Prize categories and awardees of 2019", longtable = TRUE) %>% 
-  kableExtra::kable_styling(font_size = 10, latex_options = "striped") %>% 
+  kableExtra::kable_styling(font_size = 8, latex_options = "striped") %>% 
   kableExtra::column_spec(column = 1:3, width = c("8em", "6em", "16em"))
 ```
 
@@ -367,8 +368,8 @@ tribble(
   "The Nobel Peace Prize", "Word Food Programme (WFP)", "For its efforts to combat hunger, for its contribution to bettering conditions for peace in conflict-affected areas and for acting as a driving force in efforts to prevent the use of hunger as a weapon of war and conflict."
 ) %>% 
   knitr::kable(booktabs = TRUE, caption = "Nobel Prize categories and awardees of 2020", longtable = TRUE) %>% 
-  kableExtra::kable_styling(font_size = 10, latex_options = "striped") %>% 
-  kableExtra::column_spec(column = 1:3, width = c("8em", "6em", "16em"))
+  kableExtra::kable_styling(font_size = 8, latex_options = "striped") %>% 
+  kableExtra::column_spec(column = 1:3, width = c("10em", "6em", "20em"))
 ```
 
 ### Roman Magasaysay Award
@@ -386,4 +387,3 @@ The following is a partial list of the awardees of the Ramon Magsaysay Award. Aw
 - JLCCA: Journalism, Literature, and the Creative Communication Arts
 - PIU: Peace and International Understanding
 - EL: Emergent Leadership 
-

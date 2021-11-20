@@ -38,7 +38,7 @@ tribble(
   "Terai", 10, "Kisan, Meche (Bodo)", "Dhanuk (Rajbansi), Jhangad, Santhal (Satar)", "Dhimal, Gangai, Rajbansi (Koch), Tajpuriya, Tharu", NA, NA
 ) %>% 
   rename_all(function(x)str_to_sentence(str_replace_all(x, "_", " "))) %>% 
-  knitr::kable(booktabs = TRUE, caption = "Classification of Adivasi/Janajatis in Nepal; Source: NEFIN, 2004") %>% 
+  knitr::kable(booktabs = TRUE, caption = "Classification of Adivasi/Janajatis in Nepal; Source: NEFIN, 2004", longtable = TRUE) %>% 
   kableExtra::kable_styling(latex_options = "striped", font_size = 8) %>% 
   kableExtra::column_spec(column = 1:7, width = c("5em", "4em", rep("8em", 5)))
   

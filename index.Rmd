@@ -7,7 +7,7 @@ site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book
 classoption: openany # this will force for 2 side layout of book to open chapter at any side
-bibliography: [bibliography/bib.bib]
+bibliography: [bibliography/bib.bib, bibliography/bibliography.bib]
 biblio-style: apalike
 link-citations: yes
 # github-repo: deependrad/comprehensive-crap-objective
@@ -23,7 +23,7 @@ knitr::opts_chunk$set(tidy = TRUE, cache = FALSE,
                       # fig.show = "hold", 
                       fig.align = "center", fig.width = 6,
                       fig.asp = 0.9, out.width = "0.85\\linewidth")
-options(knitr.kable.NA = "", digits = 3, knitr.table.format = "latex")
+options(knitr.kable.NA = "", digits = 3, knitr.table.format = "latex", scipen = 12)
 options(kableExtra.latex.load_packages = FALSE)
 require(kableExtra)
 require(tidyverse)

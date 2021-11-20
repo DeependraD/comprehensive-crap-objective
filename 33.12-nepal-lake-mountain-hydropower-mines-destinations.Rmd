@@ -1,3 +1,5 @@
+# Lakes, mountains, and rivers and iterinary destinations of Nepal
+
 ## Hydroelectricity in Nepal
 
 Status of electricity production as of 2076/77 (Annual Report, NEA)
@@ -22,7 +24,8 @@ tribble(
 
 ```{r hydropower-completed}
 read_csv("./data/hydropower_operational_nea_book_2077.csv") %>% 
-  knitr::kable(booktabs = TRUE, longtable = TRUE) %>% 
+  rename(SN = sn) %>% 
+  knitr::kable(booktabs = TRUE, longtable = TRUE, align = "l") %>% 
   kableExtra::kable_styling(latex_options = "striped", font_size = 8) %>% 
   kableExtra::column_spec(column = 1:6, width = c("3em", "16em", "10em", "5em", "5em", "6em"))
 ```
@@ -109,9 +112,9 @@ lakes_nepal_split %>%
 ```{r landmarks-nepal}
 read_csv("./data/nepal_landmarks.csv") %>% 
   rename_all(function(x)str_to_sentence(x)) %>% 
-  knitr::kable(booktabs = TRUE, longtable = TRUE, caption = "Major landmarks of Nepal") %>% 
+  knitr::kable(booktabs = TRUE, longtable = TRUE, caption = "Major landmarks of Nepal", align = "l") %>% 
   kableExtra::kable_styling(latex_options = "striped", font_size = 8) %>% 
-  kableExtra::column_spec(column = 1:5, width = c("3em", "5em", "5em", "6em", "18em"))
+  kableExtra::column_spec(column = 1:5, width = c("1.5em", "5em", "5em", "6em", "18em"))
 ```
 
 ## Mineral resources
@@ -177,6 +180,6 @@ tribble(
   knitr::kable(booktabs = TRUE, caption = "Mines (minerals and non-minerals) of Nepal and some remarks on those.", longtable = TRUE, escape = TRUE) %>% 
   kableExtra::kable_styling(font_size = 8, latex_options = "striped") %>% 
   kableExtra::landscape(margin = "1.25cm") %>% 
-  kableExtra::column_spec(column = 1:4, width = c("5em", "12em", "22em", "22em"))
+  kableExtra::column_spec(column = 1:4, width = c("5em", "14em", "24em", "24em"))
 ```
 

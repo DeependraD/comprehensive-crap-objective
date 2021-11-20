@@ -67,7 +67,7 @@ Madan puraskar is a literary honor in Nepal which Madan Puraskar Guthi confers a
 
 It was established by daughter in law of Prime Minister Chandra Shumsher JBR Queen Jagadamba Kumari Devi, in memory of her husband late General Madan Shumsher JBR, on September 26, 1955. Since then it has been presented every year, except in 1974 and 1977. At the time of its establishment, the award prize was NRS 4000. Since the Golden Jubilee year 2005 the award prize has been increased to NRs. 400,000.
 
-List of winners
+**List of winners**
 
 ```{r winners-list}
 # madan_puraskar <- read_html("https://en.wikipedia.org/wiki/Madan_Puraskar") %>% 

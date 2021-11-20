@@ -2,7 +2,7 @@
 
 ## Sports records
 
-Lawn Tennis
+**Lawn Tennis**
 
 - US Open 2016 [men]: Stan Wawrinka; [Women] : Angelique Kerber
 - French Open 2016[men]: Novak Djokovic; [women] : Gabrin Muguruza
@@ -10,7 +10,7 @@ Lawn Tennis
 - Wimbeldon [men]: Andy Murray; [women]: Serena Williams   
 - World Table Tennis Championship: male and female both won by India
 
-Football
+**Football**
 
 - Champions League 2015/16: won by Real Madrid; Athletico Madrid (1st runner up)
 - Premier League2015/16 : won by Leicester City
@@ -20,7 +20,7 @@ Football
 - Winner of Euro Cup 2016 is Portugal; France (runner up).
 - Winner of Copa America 2016 is Chile
 
-Cricket
+**Cricket**
 
 - World Cup Cricket Winner 2015 - Australia, Runner-Up : New Zealand
 - ICC U-19, ICC T-20, ICC T-20 Women's World cup Winner - West Indies
@@ -28,7 +28,7 @@ Cricket
 - IPL 2016 winner - Sunrisers hyderbad, 1st runner-Up : Royal Challengers Banglore
 - EPL 2016 winner - Tez Panchakanya (Captain Sharad Veswakar) held in TU, Kirtipur
 
-Facts
+**Facts**
 
 - 12th South Asian Games 2016 was held in India
 - Asian games 2018 will be held in Indonesia.
@@ -67,7 +67,7 @@ Facts
 
 ```{r sport-num-players}
 read_csv("./data/sports_number_of_players.csv") %>% 
-  knitr::kable(caption = "Number of players in different sports.", booktabs = TRUE) %>% 
+  knitr::kable(caption = "Number of players in different sports.", booktabs = TRUE, longtable = TRUE) %>% 
   kableExtra::kable_styling(latex_options = c("HOLD_position", "striped"))
 ```
 
@@ -75,8 +75,8 @@ read_csv("./data/sports_number_of_players.csv") %>%
 
 ```{r sporting-terminologies}
 read_csv("./data/sports_terms.csv") %>% 
-  knitr::kable(caption = "A glossary of sporting terms used worldwide.", booktabs = TRUE) %>% 
-  kableExtra::kable_styling(latex_options = "striped") %>% 
+  knitr::kable(caption = "A glossary of sporting terms used worldwide.", booktabs = TRUE, longtable = TRUE) %>% 
+  kableExtra::kable_styling(latex_options = "striped", longtable = TRUE) %>% 
   kableExtra::column_spec(column = 1:2, width = c("18em", "8em"))
 ```
 
@@ -86,7 +86,7 @@ read_csv("./data/sports_terms.csv") %>%
 ```{r national-games}
 read_csv("./data/sports_national_games_countries.csv") %>% 
   knitr::kable(booktabs = TRUE, caption = "National games of some of countries", longtable = TRUE) %>% 
-  kableExtra::kable_styling(latex_options = c("HOLD_position")) # does not work with "striped"
+  kableExtra::kable_styling(latex_options = "striped") # does not work with "striped"
 ```
 
 ### World Cup
@@ -123,19 +123,19 @@ read_csv("./data/sports_national_games_countries.csv") %>%
 
 Olympic Games are the most important international athletic competition in the world. They are held every four years, each time in a different country. This world's oldest sports event brings together thousands of the world's finest athletes to compete against one another in a variety of individual and team sports. More than 10,000 athletes representing  over  190  nations participate in the Olympics. Millions of people attend the games and more than 1 billion people throughout the world watch the Olympics on television.Ancient Olympics The Olympics Games originated in ancient Greece and were held from 776 BC to AD 393. They were celebrated like religious festivals, honouring Zeus, the king of the gods. The Roman conquered Greece during the 140's BC, and the games soon lost their religious meaning.  In  AD  393,  Emperor Theodosius I banned the games.
 
-Modern Olympics 
+_Modern Olympics_
 
 Baron Pierre de Coubertine, a french educator,  revived  the  games  to encourage world peace and friendship and  to  promote  healthy  sporting competition for the youth of the world. The first modern Olympic Games were held in Athens, Greece, in 1896. In the opening ceremony, the athletes of Greece march into the stadium first, in honour of the original games held in ancient Greece. The athletes of the host country enter last.
 
-The International Olympic Committee
+_The International Olympic Committee_
 
 The International Olympic Committee (IOC) is the governing body of the Olympic Games. The IOC has its headquarters in Lausanne, Switzerland. The Committee approves the sports and events to be included in the games. The IOC also selects the host cities for the games, seven years in advance. Host cities  provide  a  special  housing compound called the Olympic Village for the athletes and coaches.
 
-Olympic Flame
+_Olympic Flame_
 
 The flame symbolizes the light of spirit, knowledge and life, and it is a message of peace. The fire is ignited in Olympia, Greece, by using a mirror to concentrate the rays of the Sun. Runners transport the flame in a torch relay from Greece to the site of the games. The final runner carries the torch into the stadium, circles the tract and lights a huge cauldron (pot). The flame is kept burning throughout  the  games  and  then extinguished  during  the  closing ceremony.
 
-Olympic Emblem and Flag
+_Olympic Emblem and Flag_
 
 The Olympic Emblem, created in 1913, consists of five interlocking rings that represent the continents of Africa, Asia, Australia, Europe and the Americas. The flag of every nation competing in the games has at least one of these colours. The Olympic Flag is white in colour, originally made of cotton. The Emblem is placed in the middle of the flag.
 
@@ -147,29 +147,29 @@ tribble(~"Color of ring", ~"Continent represented",
         "Black ring", "Africa",
         "Green ring", "Australia",
         "Red ring", "America") %>% 
-  knitr::kable(caption = "Symbolism of olympic rings", booktabs = TRUE) %>% 
+  knitr::kable(caption = "Symbolism of olympic rings", booktabs = TRUE, longtable = TRUE) %>% 
   kableExtra::kable_styling(latex_options = "striped") 
 ```
 
-Olympic Motto
+_Olympic Motto_
 
 Citius, Altius, Fortius These are Latin words which are translated as: 'Swifter, Higher, Stronger'.
 
-Olympic Epigram
+_Olympic Epigram_
 
 "The essential thing in life is not conquering but fighting well."
 
-Olympic Medals
+_Olympic Medals_
 
 The winners are awarded medals, but no prize money. The top three finishers in each event receive a medal and a diploma. The next five finishers get only a diploma. Each first-place winner receives a gold medal, which is actually made of silver and coated with gold.
 
 The second-place medal is made of silver and the third-place medal is made of bronze. The design for the medal changes  for  each  Olympics. All members of a winning relay team get a medal. In team sports, all the members of a winning team who have played in at least one of the games during the competition receive a medal.
 
-The Summer Games
+_The Summer Games_
 
 The Olympic Games consist of the Summer Games and the Winter Games. The Summer Games are held during the summer season of the host city, usually between July and October. These games last 16 days. Athletes compete in more than 270 separate events during the Summer Games. Women  first participated in Olympics in 1900 in Paris.
 
-The Winter Games
+_The Winter Games_
 
 The Winter Games with over 60 events are usually held in February and last 16 days. The games attract approximately 2,000 athletes from around 60 countries. The Winter Games, established in 1924, took place the same year as the Summer Games. Beginning in 1994, the Winter and Summer Games were divided and scheduled on four-year cycles two years apart.
 
@@ -209,7 +209,7 @@ European Champion Clubs' Cup - colloquially the European Cup, awarded to the win
 
 Philip F. Anschutz Trophy - Awarded to the winners of the MLS Cup, the MLS' championship game
 
-UEFA Super Cup - Awarded to the winners of the Uefa Champions League and the UEFA Europa League.
+UEFA Super Cup - Awarded to the winners of the UEFA Champions League and the UEFA Europa League.
 
 The Scottish Cup - Awarded to the winners of the primary domestic knockout cup tournament of Scotland (the Scottish Football Association Challenge Cup, or just Scottish Cup). The tournament was founded in 1873 and still presents the original trophy. The Scottish Cup is therefore the world's oldest national football trophy and second oldest national trophy, behind the Carlisle Bells race trophy dating back to 1599.
 
@@ -306,11 +306,11 @@ Liam MacCarthy Cup - Awarded to the winners of the All-Ireland Senior Hurling Ch
 
 **Motorsport**
 
--APBA Gold Cup - Awarded to the Detroit Gold Cup H1 Unlimited Champion. 
--British Grand Prix Trophy - Awarded to the winner of the Formula One British Grand Prix. 
--Borg-Warner Trophy - Awarded to the Indianapolis 500 Champion. 
--Harley J. Earl Trophy - Awarded to the Daytona 500 Champion. 
--Sprint Cup Trophy - Awarded to the NASCAR's Sprint Cup Series Champion 
+- APBA Gold Cup - Awarded to the Detroit Gold Cup H1 Unlimited Champion. 
+- British Grand Prix Trophy - Awarded to the winner of the Formula One British Grand Prix. 
+- Borg-Warner Trophy - Awarded to the Indianapolis 500 Champion. 
+- Harley J. Earl Trophy - Awarded to the Daytona 500 Champion. 
+- Sprint Cup Trophy - Awarded to the NASCAR's Sprint Cup Series Champion
 
 **Tennis**
 
@@ -359,4 +359,3 @@ Many professional associations award trophies in recognition of outstanding work
 - Billboard Music Award - Awarded by billboard to honor outstanding chart performance. The trophy is manufactured by the New York firm Society Awards.
 - NAACP Image Award - Awarded for excellence in film, television, music, and literature by outstanding people of color. The trophy is manufactured by the New York firm Society Awards.
 - D\&AD Awards - Awarded for excellence within design and advertising
-
