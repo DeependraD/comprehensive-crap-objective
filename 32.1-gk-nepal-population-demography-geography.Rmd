@@ -1,3 +1,5 @@
+# Nepal: Population, demography, conservation and geography
+
 ## Population census, 2068
 
 ```{r census-2068}
@@ -44,6 +46,71 @@ tribble(
   
 ```
 
+## Geographical and political division of Nepal
+
+- Himalayan region 15% of land with 16 districts
+- Hilly region 68% of land with 39 districts
+- Terai region 17%of land with 20 districts.
+- Land with the lowest altitude from sea level: Kechanakalan (Jhapa)
+- Nepal covers an area of 0.03% of the world and 0.3% of Asia
+- Largest district: Dolpa
+- Smallest district: Bhaktapur
+- Largest Lake of Nepal: Rara
+- Deepest lake of Nepal: Shey - Phoksundo (Y - Shaped lake)
+- The lake situated at highest altitude of the world: Tilicho (Manang)
+- The total agricultural land in terai: 53% of the total
+- Total national parks: 11
+- Biggest national park: Shey - Phoksundo N.P. (3555 sq.km)
+- Smallest national park: Rara N.P. (106 sq.km)
+- First national Park: Chitwan N.P (listed in world heritage site) established in 1973 AD
+- Last national park (recently established): Banke N.P.
+- Langtang N.P. famous for Red Panda and Chitwan N.P. famous for One horned rhino
+- Koshi Tappu Wildlife reserve famous for Wild buffalo (Arna)
+
+**Political division and basic information**
+
+- Total municipality in Nepal: 191
+- Metropolitian Municipality: 1 (Ktm)
+- Submetropolitian Municipality: 11
+- Total Village Development Committee (VDC) in Nepal: 3276
+- The districts without VDC: 2 (Kathmandu and Bhaktapur)
+- Population of Nepal according to census 2068 BS: 26494504
+- Male population 48.5% and female population 51.5%
+- Population density, census 2068 BS: 180 population/sq.km
+- Literacy rate, census 2068 BS: 65.9% (male: 75.1% and female: 57.4%)
+- 1st president of Nepal: Dr. Ram Baran Yadav
+- 1st Vice - President of Nepal: Parmananda Jha
+- Present Prime Minister of Nepal: Puspa Kamal Dahal (39th Prime Minister of Nepal)
+- Present Finance Minister of Nepal: Krishna Bahadur Mahara
+- Present Energy Minister of Nepal: Janardan Sharma
+- Present Health Minister of Nepal: Gagan Thapa
+- Present Education Minister of Nepal: Dhaniram Poudel
+- Present Forest Minister of Nepal àShankar Bhandari
+- Present Agriculture Minister of Nepal: Gauri Shankar Chaudhary
+- 1st Prime Minister of Nepal: Bhimsen Thapa
+- 1st Lady Minister of Nepal: Dwarika Devi Thakurani
+- 1st Census taken in Nepal: 1968 BS (1911 AD)
+- 1st five year plan started in Nepal (1956-1961 AD): 2013, Asoj 01
+- Districts linking both India and China: 2 (Darchula and Taplejung)
+- District of Baunna Pokhari Tripanna Tal: Rukum
+- Baglung district is known as district of Hanging bridges. It is the district with the boundary similar to map of Nepal.
+- District of Terai not linked with Mahendra Highway: Parsa
+- Famous district for production of Coffee: Gulmi
+- Famous district of Orange production: Dhankuta
+- Total budget allocated for Fiscal year 2072/73 BS: 8 Kharab 19 arab 64 crore and88 lakh.
+- Severe earthquake on 12th Baisakh 2072 BS at 11:36 am took more than 8850 people.
+- CEO of present Cricket Association Nepal: Bhawana Ghimire
+- Constitution Asembly - 2 election at 2070/08/04
+
+## Protected areas: National park, wildlife reserve and buffer zone
+
+```{r national-parks-protected-areas}
+read_csv("./data/nepal_protected_areas.csv", skip_empty_rows = TRUE) %>% 
+  knitr::kable(booktabs = TRUE, caption = "List of protected areas with general information", longtable = TRUE) %>%
+  # kableExtra::kable_styling(latex_options = "striped", font_size = 8) %>% 
+  kableExtra::kable_styling(font_size = 8) %>% 
+  kableExtra::column_spec(column = 1:5, width = c("6em", "5em", "5em", "5em", "18em"))
+```
 
 ## Hulaki rajmarga (Hulaki highway)
 

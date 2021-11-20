@@ -1,6 +1,5 @@
-# Lakes, mountains, and rivers and iterinary destinations of Nepal
 
-## Hydroelectricity in Nepal
+## Hydroelectricity
 
 Status of electricity production as of 2076/77 (Annual Report, NEA)
 
@@ -45,7 +44,7 @@ read_csv("./data/hydropower_planned_and_proposed_projects_nea_book_2076-77.csv")
 # read_csv("./data/nepal_hydroelectricity_projects_upcomming.csv", skip = 2) # nea report 2073
 ```
 
-## Mountains of Nepal
+## Mountains
 
 ```{r nepal-peaks}
 # reconcile these two data
@@ -58,7 +57,7 @@ read_csv("./data/nepal_mountains.csv") %>%
   kableExtra::kable_styling(font_size = 8, latex_options = "striped")
 ```
 
-## Rivers of Nepal
+## Rivers
 
 The Koshi River system is the largest and originated from the top four Himalayan peaks (Mt. Everest-8,850 m, Mt. Jannu-7,710 m, Mt. Makalu-8,462 m and Mt. Cho Oyu-8,201 m). The Koshi is also called Sapta Koshi for its seven Himalayan tributaries in eastern Nepal: Indrawati, Sun Koshi, Tama Koshi, Dudh Koshi, Liku, Arun, and Tamor. The Arun rises in Tibet some 150 km beyond Nepal's northern border. A tributary of the Sun Koshi, Bhote Koshi also originated in Tibet and is followed by the Arniko Highway connecting Kathmandu (Nepal) and Lhasa (Tibet-China)
 
@@ -76,7 +75,7 @@ read_csv("./data/rivers_of_nepal_basin_system.csv", skip = 3) %>%
   kableExtra::column_spec(column = 1:5, width = c("8em", "8em", rep("6em", 3)))
 ```
 
-## Lakes of Nepal
+## Lakes
 
 ```{r lakes-of-nepal}
 

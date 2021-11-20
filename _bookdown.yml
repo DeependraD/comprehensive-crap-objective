@@ -7,16 +7,14 @@ language:
 rmd_files:
   html: []
   latex: ["index.Rmd",
-  "33.2-body-gk-sports.Rmd",
-  "33.3-body-gk-world-geography.Rmd",
-  "33.4-body-gk-world-history-language-religion.Rmd",
-  "33.12-nepal-lake-mountain-hydropower-mines-destinations.Rmd",
-  "33.12-nepal-population-demography-geography.Rmd",
-  "33.13-body-gk-environment-biodiversity-holidays-observances.Rmd",
-  "33.14-body-gk-international-organizations-abbreviation-awards.Rmd",
-  "33.15-body-gk-events-ceremonies-national-awards.Rmd",
-  "33.16-body-gk-writers-artists-art-culture-misc.Rmd",
-  "33.22-body-gk-nepal-events-2077.Rmd",
-  "34-body-general-knowledge-objective-include.Rmd"
+   "31.1-gk-world-geography.Rmd",
+   "31.2-gk-world-history-language-religion.Rmd",
+   "31.3-gk-world-international-organizations-abbreviation-awards.Rmd",
+   "31.4-gk-world-sports.Rmd",
+   "31.5-gk-word-nepal-events-ceremonies-national-awards.Rmd",
+   "31.6-gk-world-nepal-writers-artists-art-culture-misc.Rmd",
+   "32.1-gk-nepal-population-demography-geography.Rmd",
+   "32.2-nepal-lake-mountain-hydropower-mines-destinations.Rmd",
+   "34-body-general-knowledge-objective-include.Rmd"
   ]
   epub: []

@@ -1,4 +1,4 @@
-## Famous books and authors
+## Famous books, authors and people, and their works
 
 - Stolen Images: Lain Singh Wangdel
 - Akash Bivajit Cha: book written by 10 authors of Nepal
@@ -23,9 +23,6 @@
 - Das Capital: Karl Marx
 - My Experiment with Truth: Mahatma Gandhi
 
-## Miscellaneous
-
-- 1st Miss Nepal : Rakshya Rana [1994]
 - Miss Nepal 2016: Ashmi Shrestha            
 - Miss Nepal Earth: Roshani Khatri
 - Miss Nepal International: Barsha Lekhi
